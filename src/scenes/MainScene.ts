@@ -1,11 +1,12 @@
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
+import { createWorldLayers } from './helper'
 
 var cursors: Phaser.Types.Input.Keyboard.CursorKeys
 
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
-  mapHeight = 1260
+  mapHeight = 1270
   mapWidth = 1920
   constructor() {
     super('MainScene')
@@ -34,9 +35,8 @@ export default class MainScene extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys()
 
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
-    const tilset = map.addTilesetImage('terrain_atlas', 'tiles')
-    const layer = map.createLayer('background', tilset, 0, 0)
-    const dirtlayer = map.createLayer('dirt', tilset, 0, 0)
+    const tileset = map.addTilesetImage('terrain_atlas', 'tiles')
+    const worldLayer = createWorldLayers(map, tileset)
 
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)
