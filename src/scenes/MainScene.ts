@@ -29,6 +29,12 @@ export default class MainScene extends Phaser.Scene {
     const tilset = map.addTilesetImage('terrain_atlas', 'tiles')
     const layer = map.createLayer('background', tilset, 0, 0)
     const dirtlayer = map.createLayer('dirt', tilset, 0, 0)
+
+    this.matter.world.setBounds(0, 0, window.innerWidth, window.innerHeight)
+    this.cameras.main
+      .setBounds(0, 0, window.innerWidth, window.innerHeight)
+      .setName('main')
+    this.cameras.main.startFollow(this.avatar, false, 0.2, 0.2)
   }
 
   update() {
