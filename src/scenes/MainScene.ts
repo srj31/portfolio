@@ -36,7 +36,7 @@ export default class MainScene extends Phaser.Scene {
 
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
     const tileset = map.addTilesetImage('terrain_atlas', 'tiles')
-    const worldLayer = createWorldLayers(map, tileset)
+    const worldLayer = createWorldLayers(this, this.avatar.player, map, tileset)
 
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)
