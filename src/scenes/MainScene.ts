@@ -5,6 +5,8 @@ var cursors: Phaser.Types.Input.Keyboard.CursorKeys
 
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
+  mapHeight = 1260
+  mapWidth = 1920
   constructor() {
     super('MainScene')
   }
@@ -19,7 +21,13 @@ export default class MainScene extends Phaser.Scene {
   }
 
   create() {
-    this.avatar = new Avatar(this, 450, 450, 'avatar', 0)
+    this.avatar = new Avatar(
+      this,
+      window.innerWidth / 2,
+      window.innerHeight / 2,
+      'avatar',
+      0,
+    )
     this.avatar.player.depth = 1
     this.physics.add.existing(this.avatar.player)
 
@@ -30,11 +38,11 @@ export default class MainScene extends Phaser.Scene {
     const layer = map.createLayer('background', tilset, 0, 0)
     const dirtlayer = map.createLayer('dirt', tilset, 0, 0)
 
-    this.matter.world.setBounds(0, 0, window.innerWidth, window.innerHeight)
     this.cameras.main
-      .setBounds(0, 0, window.innerWidth, window.innerHeight)
+      .setBounds(0, 0, this.mapWidth, this.mapHeight)
       .setName('main')
-    this.cameras.main.startFollow(this.avatar, false, 0.2, 0.2)
+    this.physics.world.setBounds(0, 0, this.mapWidth, this.mapHeight)
+    this.cameras.main.startFollow(this.avatar.player, false, 0.2, 0.2)
   }
 
   update() {
