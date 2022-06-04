@@ -2,6 +2,7 @@
 import Phaser from 'phaser'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
+  player!: Phaser.Physics.Arcade.Sprite
   constructor(
     scene: Phaser.Scene,
     x: number,
@@ -54,6 +55,36 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
 
     player.setCollideWorldBounds(true)
     player.setBounce(1)
-    return player
+    this.player = player
+    return this
+  }
+  update(cursors: Phaser.Types.Input.Keyboard.CursorKeys) {
+    this.player.setVelocity(0, 0)
+    if (cursors.left.isDown) {
+      this.player.x -= 2
+      this.player.setVelocityX(-2)
+      this.player.anims.play('left', true)
+    } else if (cursors.down.isDown) {
+      this.player.y += 2
+      this.player.setVelocityY(2)
+      this.player.anims.play('down', true)
+      this.player.depth = this.player.y + 64
+    } else if (cursors.right.isDown) {
+      this.player.x += 2
+      this.player.setVelocityX(2)
+      this.player.anims.play('right', true)
+    } else if (cursors.up.isDown) {
+      this.player.y -= 2
+      this.player.setVelocityY(-2)
+      this.player.anims.play('up', true)
+      this.player.depth = this.player.y + 48
+    } else {
+      this.player.scene.time.delayedCall(
+        0.15 * 1000,
+        () => this.player.anims.play('still', true),
+        [],
+        this.player,
+      )
+    }
   }
 }
