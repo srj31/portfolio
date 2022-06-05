@@ -3,7 +3,7 @@ import Phaser from 'phaser'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
-  speed = 300
+  speed = 200
   constructor(
     scene: Phaser.Scene,
     x: number,
@@ -56,9 +56,20 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
 
     player.setCollideWorldBounds(true)
     player.setBounce(1)
+    scene.time.addEvent({
+      delay: 1000, // ms
+      callback: this.setCorrectBounds,
+      callbackScope: this,
+      loop: false,
+    })
     this.player = player
     return this
   }
+
+  setCorrectBounds() {
+    this.player.body.setSize(0.5 * this.player.width, this.player.height, true)
+  }
+
   update(cursors: Phaser.Types.Input.Keyboard.CursorKeys) {
     this.player.setVelocity(0, 0)
     if (cursors.left.isDown) {

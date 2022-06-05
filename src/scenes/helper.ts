@@ -11,6 +11,8 @@ export const createWorldLayers = (
   const pathlayer = map.createLayer('path', tileset, 0, 0)
   const dirtlayer = map.createLayer('dirt', tileset, 0, 0)
   const boundarylayer = map.createLayer('boundary', tileset, 0, 0)
+  const decorCollidable = map.createLayer('decorCollidable', tileset, 0, 0)
+  const decorUncollidable = map.createLayer('decorUncollidable', tileset, 0, 0)
 
   const world = { backgroundlayer, dirtlayer, boundarylayer, pathlayer }
   scene.physics.add.collider(sprite, boundarylayer)
@@ -18,6 +20,10 @@ export const createWorldLayers = (
 
   // jungle pillars
   boundarylayer.setCollisionBetween(398, 500)
+
+  
+  scene.physics.add.collider(sprite, decorCollidable);
+  decorCollidable.setCollisionBetween(0,1000)
   return world
 }
 
