@@ -4,6 +4,7 @@ import Phaser from 'phaser'
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
   speed = 200
+  y_offset = 15
   constructor(
     scene: Phaser.Scene,
     x: number,
@@ -67,7 +68,12 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
   }
 
   setCorrectBounds() {
-    this.player.body.setSize(0.5 * this.player.width, this.player.height, true)
+    this.player.body.setSize(
+      0.5 * this.player.width,
+      0.75 * this.player.height,
+      true,
+    )
+    this.player.body.offset.y = this.y_offset
   }
 
   update(cursors: Phaser.Types.Input.Keyboard.CursorKeys) {

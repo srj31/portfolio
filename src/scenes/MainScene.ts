@@ -13,11 +13,17 @@ export default class MainScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('tiles', 'assets/terrain_atlas.png')
-    this.load.tilemapTiledJSON('map', 'assets/map1.json')
     this.load.spritesheet('avatar', 'assets/sprite/avatar1.png', {
       frameWidth: 64,
       frameHeight: 64,
+    })
+    this.load.tilemapTiledJSON('map', 'assets/map1.json')
+    this.load.image('terrain_atlas', 'assets/terrain_atlas.png')
+    this.load.image('build_atlas', 'assets/build_atlas.png')
+
+    this.load.spritesheet('desert-ruins', 'assets/desert-ruins.png', {
+      frameWidth: 32,
+      frameHeight: 32,
     })
   }
 
@@ -35,8 +41,17 @@ export default class MainScene extends Phaser.Scene {
     cursors = this.input.keyboard.createCursorKeys()
 
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
-    const tileset = map.addTilesetImage('terrain_atlas', 'tiles')
-    const worldLayer = createWorldLayers(this, this.avatar.player, map, tileset)
+    const tileset1 = map.addTilesetImage('terrain_atlas', 'terrain_atlas')
+    const tileset2 = map.addTilesetImage('build_atlas', 'build_atlas')
+    const tileset3 = map.addTilesetImage('desert-ruins', 'desert-ruins')
+    const worldLayer = createWorldLayers(
+      this,
+      this.avatar.player,
+      map,
+      tileset1,
+      tileset2,
+      tileset3,
+    )
 
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)
