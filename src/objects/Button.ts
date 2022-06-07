@@ -1,5 +1,6 @@
 export default class Button extends Phaser.Physics.Arcade.Sprite {
   id!: string
+  isPressed: boolean
   private dialogBox!: Phaser.GameObjects.Container
 
   constructor(
@@ -12,6 +13,7 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
   ) {
     super(scene, x, y, texture, frame)
     this.id = id
+    this.isPressed = false
   }
   // add texts in the dialog box container
   setDialogBox(text: string) {
@@ -55,5 +57,13 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
   // remove everything in the dialog box container
   clearDialogBox() {
     this.dialogBox.removeAll(true)
+  }
+
+  pressButton() {
+    this.isPressed = true
+  }
+
+  unPressButton() {
+    this.isPressed = false
   }
 }
