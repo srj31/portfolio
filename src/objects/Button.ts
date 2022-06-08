@@ -77,13 +77,11 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
     /*
         Open a React Modal to display the message
     */
-    console.log('pressed')
-    ButtonInteraction.buttonPressed = this
+    ButtonInteraction.pressButton(this)
   }
 
   unPressButton() {
     this.isPressed = false
-    console.log('let go')
-    ButtonInteraction.buttonPressed = null
+    ButtonInteraction.unpressButton()
   }
 }

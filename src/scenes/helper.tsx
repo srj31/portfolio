@@ -43,7 +43,7 @@ export const createWorld = (
   buttonLayer.objects.forEach((buttonObj) => {
     const item = addObjectFromTiled(buttons, buttonObj, tilesets, 0) as Button
     item.id = buttonObj.id
-    console.log(item)
+    item.messageShownWhenPressed = <div>{buttonObj.id}</div>
   })
 
   addOverlapInteraction(scene, sprite, [buttons])

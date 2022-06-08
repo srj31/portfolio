@@ -5,7 +5,7 @@ import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
-  speed = 200
+  speed = 300
   y_offset = 15
   constructor(
     scene: Phaser.Scene,
