@@ -356,22 +356,62 @@
   <object id="166" gid="600" x="1277.26" y="1044.63" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="14" name="button">
-  <object id="30" gid="4970" x="545.126" y="193.251" width="32" height="32"/>
-  <object id="39" gid="4970" x="192.65" y="353.284" width="32" height="32"/>
-  <object id="40" gid="4970" x="336.476" y="225.663" width="32" height="32"/>
-  <object id="54" gid="3730" x="1309.76" y="168.973" width="32" height="32"/>
-  <object id="71" gid="3730" x="1548.72" y="225.127" width="32" height="32"/>
-  <object id="77" gid="3730" x="1625.48" y="420" width="32" height="32"/>
-  <object id="94" gid="2293" x="290.76" y="863.284" width="32" height="32"/>
-  <object id="119" gid="2293" x="95.7644" y="1017.82" width="32" height="32"/>
-  <object id="132" gid="2293" x="399.498" y="1143.34" width="32" height="32"/>
-  <object id="145" gid="2295" x="1525.79" y="1123.29" width="32" height="32"/>
+  <object id="30" gid="4970" x="545.126" y="193.251" width="32" height="32">
+   <properties>
+    <property name="type" value="uni"/>
+   </properties>
+  </object>
+  <object id="39" gid="4970" x="192.65" y="353.284" width="32" height="32">
+   <properties>
+    <property name="type" value="exam"/>
+   </properties>
+  </object>
+  <object id="40" gid="4970" x="336.476" y="225.663" width="32" height="32">
+   <properties>
+    <property name="type" value="tutor"/>
+   </properties>
+  </object>
+  <object id="54" gid="3730" x="1309.76" y="168.973" width="32" height="32">
+   <properties>
+    <property name="type" value="masterword"/>
+   </properties>
+  </object>
+  <object id="71" gid="3730" x="1548.72" y="225.127" width="32" height="32">
+   <properties>
+    <property name="type" value="tools"/>
+   </properties>
+  </object>
+  <object id="77" gid="3730" x="1625.48" y="420" width="32" height="32">
+   <properties>
+    <property name="type" value="thinkathon"/>
+   </properties>
+  </object>
+  <object id="94" gid="2293" x="290.76" y="863.284" width="32" height="32">
+   <properties>
+    <property name="type" value="bukuwarung"/>
+   </properties>
+  </object>
+  <object id="119" gid="2293" x="95.7644" y="1017.82" width="32" height="32">
+   <properties>
+    <property name="type" value="zendodo"/>
+   </properties>
+  </object>
+  <object id="132" gid="2293" x="399.498" y="1143.34" width="32" height="32">
+   <properties>
+    <property name="type" value="ncs"/>
+   </properties>
+  </object>
+  <object id="145" gid="2295" x="1525.79" y="1123.29" width="32" height="32">
+   <properties>
+    <property name="type" value="contact"/>
+   </properties>
+  </object>
   <object id="165" gid="2295" x="1328" y="1071.15" width="32" height="32"/>
   <object id="174" gid="2295" x="1588.78" y="974.923" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="15" name="statue">
-  <object id="32" gid="5065" x="544.126" y="126.389" width="32" height="32"/>
-  <object id="33" gid="5033" x="544.126" y="93.9905" width="32" height="32"/>
+  <object id="32" gid="5065" x="544.126" y="127.389" width="32" height="32"/>
+  <object id="33" gid="5033" x="544.126" y="95.4826" width="32" height="32"/>
   <object id="38" gid="5063" x="173.405" y="293.525" width="32" height="32"/>
   <object id="42" gid="5058" x="335.464" y="166.917" width="32" height="32"/>
   <object id="43" gid="5026" x="335.489" y="134.505" width="32" height="32"/>

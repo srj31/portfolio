@@ -1,8 +1,7 @@
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
-import Button from '../objects/Button'
 import { ButtonInteraction } from '../objects/Interaction'
-import { createWorld, findCorrectTileset } from './helper'
+import { createWorld } from './helper'
 
 var cursors: Phaser.Types.Input.Keyboard.CursorKeys
 
@@ -82,6 +81,7 @@ export default class MainScene extends Phaser.Scene {
     this.physics.world.setBounds(0, 0, this.mapWidth, this.mapHeight)
     this.cameras.main.startFollow(this.avatar.player, false, 0.5, 0.5)
     this.cameras.main.centerOn(this.mapWidth / 2, this.mapHeight / 2)
+    this.cameras.main.roundPixels = true
   }
 
   update() {

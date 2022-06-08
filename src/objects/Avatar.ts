@@ -1,6 +1,5 @@
 // GameObject avatar
 import Phaser from 'phaser'
-import Button from './Button'
 import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {

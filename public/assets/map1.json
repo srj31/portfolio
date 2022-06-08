@@ -99,7 +99,7 @@
          "name":"path",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -150,7 +150,7 @@
          "name":"dirt",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -201,7 +201,7 @@
          "name":"dirt_path",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -252,7 +252,7 @@
          "name":"boundary",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -303,7 +303,7 @@
          "name":"decorCollidable",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -354,7 +354,7 @@
          "name":"decorUncollidable",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -558,7 +558,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -677,7 +677,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -691,6 +691,12 @@
                  "height":32,
                  "id":30,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"uni"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -703,6 +709,12 @@
                  "height":32,
                  "id":39,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"exam"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -715,6 +727,12 @@
                  "height":32,
                  "id":40,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"tutor"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -727,6 +745,12 @@
                  "height":32,
                  "id":54,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"masterword"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -739,6 +763,12 @@
                  "height":32,
                  "id":71,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"tools"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -751,6 +781,12 @@
                  "height":32,
                  "id":77,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"thinkathon"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -763,6 +799,12 @@
                  "height":32,
                  "id":94,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"bukuwarung"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -775,6 +817,12 @@
                  "height":32,
                  "id":119,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"zendodo"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -787,6 +835,12 @@
                  "height":32,
                  "id":132,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"ncs"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -799,6 +853,12 @@
                  "height":32,
                  "id":145,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"contact"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -832,7 +892,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -851,7 +911,7 @@
                  "visible":true,
                  "width":32,
                  "x":544.126,
-                 "y":126.389
+                 "y":127.389
                 }, 
                 {
                  "gid":5033,
@@ -863,7 +923,7 @@
                  "visible":true,
                  "width":32,
                  "x":544.126,
-                 "y":93.9905
+                 "y":95.4825763917107
                 }, 
                 {
                  "gid":5063,
@@ -1191,7 +1251,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1730,7 +1790,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

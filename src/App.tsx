@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import logo from './logo.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
-import phaserGame from './PhaserGame'
-import HelloWorldScene from './scenes/HelloWorldScene'
 import Modal from './component/Modal/Modal'
-import Button from './objects/Button'
 import { ButtonInteraction } from './objects/Interaction'
-import { ReactElement } from 'react'
 
 function App() {
   const [open, setOpen] = useState<boolean>(false)
@@ -32,7 +27,7 @@ function App() {
         open={open}
         title={'info'}
         height={'70vh'}
-        handleClose={() => setOpen(false)}
+        handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
         {modal}
       </Modal>

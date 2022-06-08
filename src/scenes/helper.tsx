@@ -2,6 +2,8 @@ import { time } from 'console'
 import { Scene } from 'phaser'
 import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
+import { data } from '../data'
+import { ReactElement } from 'react'
 
 export const createWorld = (
   scene: Phaser.Scene,
@@ -43,7 +45,13 @@ export const createWorld = (
   buttonLayer.objects.forEach((buttonObj) => {
     const item = addObjectFromTiled(buttons, buttonObj, tilesets, 0) as Button
     item.id = buttonObj.id
-    item.messageShownWhenPressed = <div>{buttonObj.id}</div>
+    let message: ReactElement
+    if (buttonObj.properties && buttonObj.properties.length > 0) {
+      message = data[buttonObj.properties[0].value]
+    } else {
+      message = <div>{buttonObj.id.toString()}</div>
+    }
+    item.messageShownWhenPressed = message
   })
 
   addOverlapInteraction(scene, sprite, [buttons])
