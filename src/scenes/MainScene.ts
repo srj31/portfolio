@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
-import { createWorldLayers } from './helper'
+import { createWorld } from './helper'
 
 var cursors: Phaser.Types.Input.Keyboard.CursorKeys
 
@@ -64,7 +64,7 @@ export default class MainScene extends Phaser.Scene {
     const tileset3 = map.addTilesetImage('desert-ruins', 'desert-ruins')
     const tileset4 = map.addTilesetImage('obj_misk_atlas', 'obj_misk_atlas')
     const tileset5 = map.addTilesetImage('base_out_atlas', 'base_out_atlas')
-    const worldLayer = createWorldLayers(this, this.avatar.player, map, [
+    const worldLayer = createWorld(this, this.avatar.player, map, [
       tileset1,
       tileset2,
       tileset3,

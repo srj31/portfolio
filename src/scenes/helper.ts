@@ -1,20 +1,33 @@
 import { Scene } from 'phaser'
+import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
 
-export const createWorldLayers = (
+export const createWorld = (
   scene: Phaser.Scene,
   sprite: Phaser.Physics.Arcade.Sprite,
   map: Phaser.Tilemaps.Tilemap,
   tilesets: Phaser.Tilemaps.Tileset[],
 ): WorldLayer => {
-  const backgroundlayer = map.createLayer('background', tilesets, 0, 0)
-  const pathlayer = map.createLayer('path', tilesets, 0, 0)
-  const dirtlayer = map.createLayer('dirt', tilesets, 0, 0)
-  const boundarylayer = map.createLayer('boundary', tilesets, 0, 0)
-  const dirtpathlayer = map.createLayer('dirt_path', tilesets, 0, 0)
-
-  const decorCollidable = map.createLayer('decorCollidable', tilesets, 0, 0)
-  const decorUncollidable = map.createLayer('decorUncollidable', tilesets, 0, 0)
+  const layerIds = [
+    'background',
+    'path',
+    'dirt',
+    'boundary',
+    'dirt_path',
+    'decorCollidable',
+    'decorUncollidable',
+  ]
+  const layers = createLayers(map, layerIds, tilesets)
+  console.log(layers)
+  const {
+    backgroundlayer,
+    pathlayer,
+    dirtlayer,
+    boundarylayer,
+    dirtpathlayer,
+    decorCollidablelayer,
+    decorUncollidablelayer,
+  } = layers
 
   addGroupFromTiled(scene, map, sprite, 'pillar', tilesets, false, 100)
 
@@ -24,7 +37,18 @@ export const createWorldLayers = (
 
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
 
-  addGroupFromTiled(scene, map, sprite, 'button', tilesets, false, 0)
+  const buttons = scene.physics.add.staticGroup({ classType: Button })
+  const buttonLayer = map.getObjectLayer('button')
+  buttonLayer.objects.forEach((buttonObj) => {
+    const item = addObjectFromTiled(
+      map,
+      buttons,
+      buttonObj,
+      tilesets,
+      0,
+    ) as Button
+    item.id = buttonObj.id
+  })
 
   // map
 
@@ -35,9 +59,44 @@ export const createWorldLayers = (
   // jungle pillars
   boundarylayer.setCollisionBetween(398, 500)
 
-  scene.physics.add.collider(sprite, decorCollidable)
-  decorCollidable.setCollisionBetween(0, 1000)
+  scene.physics.add.collider(sprite, decorCollidablelayer)
+  decorCollidablelayer.setCollisionBetween(0, 1000)
   return world
+}
+
+const createLayers = (
+  map: Phaser.Tilemaps.Tilemap,
+  layerIds: string[],
+  tilesets: Phaser.Tilemaps.Tileset[],
+) => {
+  const layers: { [layerId: string]: Phaser.Tilemaps.TilemapLayer } = {}
+  layerIds.forEach((layerId) => {
+    layers[layerId + 'layer'] = map.createLayer(layerId, tilesets, 0, 0)
+  })
+  return layers
+}
+
+const addObjectFromTiled = (
+  map: Phaser.Tilemaps.Tilemap,
+  group: Phaser.Physics.Arcade.StaticGroup,
+  object: Phaser.Types.Tilemaps.TiledObject,
+  tilesets: Phaser.Tilemaps.Tileset[],
+  depth: number,
+) => {
+  const fromTileset = findCorrectTileset(tilesets, object.gid!)
+  const actualX = object.x! + object.width! * 0.5
+  const actualY = object.y! - object.height! * 0.5
+  if (fromTileset) {
+    const obj = group
+      .get(
+        actualX,
+        actualY,
+        fromTileset.name,
+        object.gid! - fromTileset.firstgid,
+      )
+      .setDepth(depth)
+    return obj
+  }
 }
 
 const addGroupFromTiled = (
@@ -78,7 +137,6 @@ const findCorrectTileset = (
   objectGid: number,
 ) => {
   let correctTileset: Phaser.Tilemaps.Tileset | null = null
-  console.log(tilesets)
   const arrayLength = tilesets.length
   for (let i = 0; i < arrayLength; i++) {
     const curTileset = tilesets[i]
