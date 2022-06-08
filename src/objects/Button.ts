@@ -2,11 +2,9 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
   id!: number
   isPressed: boolean
   private dialogBox!: Phaser.GameObjects.Container
-  messageShownWhenPressed: JSX.Element
+  messageShownWhenPressed!: JSX.Element
 
   constructor(
-    id: number,
-    messageShownWhenPresssed: JSX.Element,
     scene: Phaser.Scene,
     x: number,
     y: number,
@@ -14,11 +12,14 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
     frame?: string | number,
   ) {
     super(scene, x, y, texture, frame)
-    this.id = id
     this.isPressed = false
-    this.messageShownWhenPressed = messageShownWhenPresssed
+    this.dialogBox = this.scene.add.container().setDepth(1000)
   }
   // add texts in the dialog box container
+  setMessage(message: JSX.Element) {
+    this.messageShownWhenPressed = message
+  }
+
   setDialogBox(text: string) {
     const innerText = this.scene.add
       .text(0, 0, text)

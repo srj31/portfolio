@@ -1,3 +1,4 @@
+import { time } from 'console'
 import { Scene } from 'phaser'
 import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
@@ -18,7 +19,7 @@ export const createWorld = (
     'decorUncollidable',
   ]
   const layers = createLayers(map, layerIds, tilesets)
-  console.log(layers)
+
   const {
     backgroundlayer,
     pathlayer,
@@ -40,15 +41,12 @@ export const createWorld = (
   const buttons = scene.physics.add.staticGroup({ classType: Button })
   const buttonLayer = map.getObjectLayer('button')
   buttonLayer.objects.forEach((buttonObj) => {
-    const item = addObjectFromTiled(
-      map,
-      buttons,
-      buttonObj,
-      tilesets,
-      0,
-    ) as Button
+    const item = addObjectFromTiled(buttons, buttonObj, tilesets, 0) as Button
     item.id = buttonObj.id
+    console.log(item)
   })
+
+  addOverlapInteraction(scene, sprite, [buttons])
 
   // map
 
@@ -64,6 +62,21 @@ export const createWorld = (
   return world
 }
 
+const addOverlapInteraction = (
+  scene: Phaser.Scene,
+  sprite: Phaser.Physics.Arcade.Sprite,
+  groups: Phaser.Physics.Arcade.StaticGroup[],
+) => {
+  scene.physics.add.overlap(sprite, groups, handleItemOverlap, undefined, scene)
+}
+
+const handleItemOverlap = (sprite: any, selectionItem: any) => {
+  selectionItem.onOverlapDialog()
+  setTimeout(() => {
+    selectionItem.clearDialogBox()
+  }, 500)
+}
+
 const createLayers = (
   map: Phaser.Tilemaps.Tilemap,
   layerIds: string[],
@@ -77,7 +90,6 @@ const createLayers = (
 }
 
 const addObjectFromTiled = (
-  map: Phaser.Tilemaps.Tilemap,
   group: Phaser.Physics.Arcade.StaticGroup,
   object: Phaser.Types.Tilemaps.TiledObject,
   tilesets: Phaser.Tilemaps.Tileset[],
@@ -132,7 +144,7 @@ const addGroupFromTiled = (
   }
 }
 
-const findCorrectTileset = (
+export const findCorrectTileset = (
   tilesets: Phaser.Tilemaps.Tileset[],
   objectGid: number,
 ) => {
