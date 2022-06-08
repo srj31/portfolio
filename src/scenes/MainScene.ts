@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
 import Button from '../objects/Button'
+import { ButtonInteraction } from '../objects/Interaction'
 import { createWorld, findCorrectTileset } from './helper'
 
 var cursors: Phaser.Types.Input.Keyboard.CursorKeys
@@ -9,6 +10,7 @@ export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
   mapHeight = 1270
   mapWidth = 1920
+  private keyE!: Phaser.Input.Keyboard.Key
   constructor() {
     super('MainScene')
   }
@@ -54,6 +56,10 @@ export default class MainScene extends Phaser.Scene {
       'avatar',
       0,
     )
+    this.keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E)
+
+    ButtonInteraction.avatar = this.avatar
+
     this.avatar.player.depth = 1
     this.physics.add.existing(this.avatar.player)
 
@@ -79,6 +85,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
-    this.avatar.update(cursors)
+    this.avatar.update(cursors, this.keyE)
   }
 }

@@ -1,3 +1,5 @@
+import { ButtonInteraction } from './Interaction'
+
 export default class Button extends Phaser.Physics.Arcade.Sprite {
   id!: number
   isPressed: boolean
@@ -61,10 +63,12 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
   // remove everything in the dialog box container
   clearDialogBox() {
     this.dialogBox.removeAll(true)
+    ButtonInteraction.onButton = null
   }
 
   onOverlapDialog() {
     this.setDialogBox('Press E to interact')
+    ButtonInteraction.onButton = this
   }
 
   pressButton() {
@@ -73,9 +77,13 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
     /*
         Open a React Modal to display the message
     */
+    console.log('pressed')
+    ButtonInteraction.buttonPressed = this
   }
 
   unPressButton() {
     this.isPressed = false
+    console.log('let go')
+    ButtonInteraction.buttonPressed = null
   }
 }

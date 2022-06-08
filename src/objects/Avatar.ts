@@ -1,5 +1,7 @@
 // GameObject avatar
 import Phaser from 'phaser'
+import Button from './Button'
+import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
@@ -76,7 +78,10 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     this.player.body.offset.y = this.y_offset
   }
 
-  update(cursors: Phaser.Types.Input.Keyboard.CursorKeys) {
+  update(
+    cursors: Phaser.Types.Input.Keyboard.CursorKeys,
+    keyE: Phaser.Input.Keyboard.Key,
+  ) {
     this.player.setVelocity(0, 0)
     if (cursors.left.isDown) {
       this.player.setVelocityX(-this.speed)
@@ -97,6 +102,16 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
         [],
         this.player,
       )
+    }
+
+    if (Phaser.Input.Keyboard.JustDown(keyE) && ButtonInteraction.onButton) {
+      // can be two things now you either press it or unpress it
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if (buttonPressed) {
+        buttonPressed.unPressButton()
+      } else {
+        ButtonInteraction.onButton.pressButton()
+      }
     }
   }
 }
