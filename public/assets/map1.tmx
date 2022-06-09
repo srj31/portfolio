@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="175">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="207">
  <editorsettings>
   <export target="map1.json" format="json"/>
  </editorsettings>
@@ -485,5 +485,52 @@
   <object id="171" gid="1557" x="1586.5" y="926.266" width="32" height="32"/>
   <object id="172" gid="1520" x="1595.72" y="948.197" width="32" height="32"/>
   <object id="173" gid="1591" x="1624.13" y="932.498" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="20" name="text">
+  <object id="189" x="496.55" y="30.8034" width="131.838" height="29.5713"/>
+  <object id="190" x="502.291" y="27.5421" width="125.285" height="34.8615">
+   <text wrap="1" valign="center">Universtiy</text>
+  </object>
+  <object id="191" x="296.328" y="85.6334" width="131.838" height="29.5713"/>
+  <object id="192" x="299.605" y="90.3006" width="125.285" height="20.0759">
+   <text wrap="1" valign="center">As A Tutor</text>
+  </object>
+  <object id="193" x="131.203" y="218.375" width="145.391" height="48.0533"/>
+  <object id="194" x="127.48" y="218.506" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Scholarships &amp; Olympiad</text>
+  </object>
+  <object id="195" x="243.657" y="671.791" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Bukuwarung</text>
+  </object>
+  <object id="196" x="70.783" y="900.645" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Zendodo</text>
+  </object>
+  <object id="197" x="393.336" y="976.947" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">NCS</text>
+  </object>
+  <object id="198" x="1484.92" y="1173.43" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Contact</text>
+  </object>
+  <object id="199" x="1260.67" y="18.9172" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">MasterWord</text>
+  </object>
+  <object id="200" x="1525.58" y="99.0059" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Tools</text>
+  </object>
+  <object id="201" x="1572.4" y="302.308" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">NCS Thinkathon</text>
+  </object>
+  <object id="202" x="819.566" y="448.932" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Education</text>
+  </object>
+  <object id="204" x="998.225" y="448.932" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Misc</text>
+  </object>
+  <object id="205" x="813.405" y="670.716" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Work Experience</text>
+  </object>
+  <object id="206" x="983.439" y="673.18" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">About Me</text>
+  </object>
  </objectgroup>
 </map>

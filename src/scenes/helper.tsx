@@ -1,5 +1,3 @@
-import { time } from 'console'
-import { Scene } from 'phaser'
 import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
 import { data } from '../data'
@@ -39,6 +37,29 @@ export const createWorld = (
   addGroupFromTiled(scene, map, sprite, 'statue', tilesets, false, 100)
 
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
+
+  const textGroup = scene.physics.add.staticGroup()
+  const textObject = map.getObjectLayer('text')
+  textObject.objects.forEach((textObject) => {
+    const actualX = textObject.x! + textObject.width! * 0.1
+    const actualY = textObject.y! + textObject.height! * 0.5
+    if (textObject.text) {
+      scene.add
+        .text(actualX, actualY, textObject.text.text, {
+          align: 'center',
+          fontSize: '1rem',
+          backgroundColor: 'rgb(1,1,1, 0.25)',
+          padding: {
+            x: 5,
+            y: 5,
+          },
+          wordWrap: {
+            width: 125,
+          },
+        })
+        .setDepth(100)
+    }
+  })
 
   const buttons = scene.physics.add.staticGroup({ classType: Button })
   const buttonLayer = map.getObjectLayer('button')
