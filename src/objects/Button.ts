@@ -30,12 +30,12 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
       .setColor('#000000')
 
     //set the size of the dialog box
-    const dialogBoxWidth = innerText.width + 4
-    const dialogBoxHeight = innerText.height + 2
+    const dialogBoxWidth = innerText.width + 20
+    const dialogBoxHeight = innerText.height + 10
 
     //play around with the values to see what they do
     const dialogBoxX = this.x - dialogBoxWidth * 0.5
-    const dialogBoxY = this.y - this.height * 0.5
+    const dialogBoxY = this.y - this.height * 0.75
 
     this.dialogBox.add(
       this.scene.add
@@ -57,7 +57,12 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
           3,
         ),
     )
-    this.dialogBox.add(innerText.setPosition(dialogBoxX + 2, dialogBoxY))
+    this.dialogBox.add(
+      innerText.setPosition(
+        dialogBoxX + 10,
+        dialogBoxY + 5,
+      ),
+    )
   }
 
   // remove everything in the dialog box container
