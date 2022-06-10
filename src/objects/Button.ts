@@ -57,12 +57,7 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
           3,
         ),
     )
-    this.dialogBox.add(
-      innerText.setPosition(
-        dialogBoxX + 10,
-        dialogBoxY + 5,
-      ),
-    )
+    this.dialogBox.add(innerText.setPosition(dialogBoxX + 10, dialogBoxY + 5))
   }
 
   // remove everything in the dialog box container

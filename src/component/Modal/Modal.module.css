@@ -20,6 +20,10 @@
     background-color: aliceblue;
 }
 
+.body {
+    overflow-y: auto;
+}
+
 .backdrop {
     position: fixed;
     z-index: 9998;

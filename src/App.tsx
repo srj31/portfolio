@@ -27,6 +27,7 @@ function App() {
         open={open}
         title={'info'}
         height={'70vh'}
+        width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
         {modal}
