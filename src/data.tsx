@@ -1,4 +1,5 @@
 import { ReactElement } from 'react'
+import styles from './data.module.css'
 
 interface messageDict {
   [label: string]: ReactElement
@@ -16,3 +17,9 @@ export const data: messageDict = {
   thinkathon: <div>this is for thinkathon</div>,
   tools: <div>This is for tools</div>,
 }
+
+const uniData = <div className={styles.container}
+    
+>
+    <img
+</div>
