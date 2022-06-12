@@ -857,7 +857,7 @@
                         {
                          "name":"type",
                          "type":"string",
-                         "value":"contact"
+                         "value":"travel"
                         }],
                  "rotation":0,
                  "type":"",
@@ -871,6 +871,12 @@
                  "height":32,
                  "id":165,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"contact"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -883,6 +889,12 @@
                  "height":32,
                  "id":174,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"hobbies"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1897,8 +1909,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":243.657325283391,
-                 "y":671.791051158206
+                 "x":243.657,
+                 "y":671.791
                 }, 
                 {
                  "height":36.0936,
@@ -1914,8 +1926,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":70.7830029571217,
-                 "y":900.644673632331
+                 "x":70.783,
+                 "y":900.645
                 }, 
                 {
                  "height":36.0936,
@@ -1931,8 +1943,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":393.335984721538,
-                 "y":976.946792902908
+                 "x":393.336,
+                 "y":976.947
                 }, 
                 {
                  "height":36.0936,
@@ -1941,15 +1953,15 @@
                  "rotation":0,
                  "text":
                     {
-                     "text":"Contact",
+                     "text":"Travel",
                      "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1484.91804484968,
-                 "y":1173.4268323312
+                 "x":1489.81763933784,
+                 "y":1181.26622294054
                 }, 
                 {
                  "height":36.0936,
@@ -1965,8 +1977,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1260.66964662395,
-                 "y":18.9172216855595
+                 "x":1260.67,
+                 "y":18.9172
                 }, 
                 {
                  "height":36.0936,
@@ -1982,8 +1994,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1525.57846870379,
-                 "y":99.0059353376047
+                 "x":1525.58,
+                 "y":99.0059
                 }, 
                 {
                  "height":36.0936,
@@ -1999,8 +2011,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1572.39956283884,
-                 "y":302.308054608181
+                 "x":1572.4,
+                 "y":302.308
                 }, 
                 {
                  "height":36.0936,
@@ -2016,8 +2028,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":819.565654509611,
-                 "y":448.932007294234
+                 "x":819.566,
+                 "y":448.932
                 }, 
                 {
                  "height":36.0936,
@@ -2033,8 +2045,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":998.225092656481,
-                 "y":448.932007294234
+                 "x":998.225,
+                 "y":448.932
                 }, 
                 {
                  "height":36.0936,
@@ -2050,8 +2062,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":813.404984228684,
-                 "y":670.71613740759
+                 "x":813.405,
+                 "y":670.716
                 }, 
                 {
                  "height":36.0936,
@@ -2067,8 +2079,42 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":983.439483982257,
-                 "y":673.18040551996
+                 "x":983.439,
+                 "y":673.18
+                }, 
+                {
+                 "height":36.0936,
+                 "id":207,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "text":"Contact",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":137.606,
+                 "x":1310.37223753551,
+                 "y":951.685788892154
+                }, 
+                {
+                 "height":36.0936,
+                 "id":208,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "text":"Hobbies",
+                     "valign":"center",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":137.606,
+                 "x":1551.03214545989,
+                 "y":858.580293740817
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2077,7 +2123,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":207,
+ "nextobjectid":209,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.5",

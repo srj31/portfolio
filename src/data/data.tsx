@@ -1,4 +1,3 @@
-import { stepButtonClasses } from '@mui/material'
 import WovenImageList from '../component/common/WovenImageList'
 import styles from '../Info.module.css'
 
@@ -95,6 +94,67 @@ export const examData = (
         fortunate to get a silver medal, a best solution and a bronze medal for
         the team competition during the Team Selection Round.
       </div>
+      <div className={styles.subsection}>
+        <strong>KVPY: </strong> The Kishore Vaigyanik Protsahan Yojana (KVPY) is
+        an on-going National Program of Fellowship in Basic Sciences, initiated
+        and funded by the Department of Science and Technology, Government of
+        India. I received this scholarship at 11th Grade after two rounds of
+        written test and interview.
+      </div>
     </div>
+  </div>
+)
+
+export const bukuwarungData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Internship at BukuWarung</div>
+  </div>
+)
+
+export const zendodoData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Internship at Zendodo</div>
+  </div>
+)
+
+export const ncsData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Internship at NCS</div>
+  </div>
+)
+
+export const contactData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Contact Me here</div>
+  </div>
+)
+
+export const masterwordData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Masterword at NUS HackNRoll2022</div>
+  </div>
+)
+
+export const toolsData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Tools I am Good at</div>
+  </div>
+)
+
+export const thinkathonData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Winning NCS Thinkathon</div>
+  </div>
+)
+
+export const travelData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Places I have been</div>
+  </div>
+)
+
+export const hobbiesData = (
+  <div className={styles.container}>
+    <div className={styles.title}>My Hobbies</div>
   </div>
 )
