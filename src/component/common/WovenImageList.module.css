@@ -1,4 +1,11 @@
 .image {
     width: 20vw;
     object-fit: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.ul {
+    display: flex;
+    justify-content: center;
 }

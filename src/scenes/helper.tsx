@@ -1,6 +1,6 @@
 import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
-import { data } from '../data'
+import { data } from '../Info'
 import { ReactElement } from 'react'
 
 export const createWorld = (

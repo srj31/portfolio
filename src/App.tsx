@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Modal from './component/Modal/Modal'
+import { data } from './Info'
 import { ButtonInteraction } from './objects/Interaction'
 
 function App() {
@@ -23,14 +24,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <Modal
+      {/* <Modal
         open={open}
-        title={'info'}
         height={'70vh'}
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
         {modal}
+      </Modal> */}
+      <Modal
+        open={true}
+        height={'80vh'}
+        width={'50vw'}
+        handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
+      >
+        {data['exam']}
       </Modal>
     </div>
   )

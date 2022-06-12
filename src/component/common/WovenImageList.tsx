@@ -10,7 +10,11 @@ interface WovenImageListProp {
 export default function WovenImageList({ imgList, cols }: WovenImageListProp) {
   return (
     <ImageList
-      sx={{ width: '50vw', height: 450 }}
+      sx={{
+        width: '50vw',
+        display: 'flex',
+        justifyContent: 'space-around',
+      }}
       variant="woven"
       cols={cols}
       gap={8}
