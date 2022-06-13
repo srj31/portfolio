@@ -81,7 +81,7 @@ export const tutorData = (
 
 export const examData = (
   <div className={styles.container}>
-    <div className={styles.title}>Scholarships</div>
+    <div className={styles.title}>Awards</div>
     <div className={styles.images}>
       <WovenImageList imgList={examImages} cols={1} />
     </div>
@@ -101,6 +101,11 @@ export const examData = (
         India. I received this scholarship at 11th Grade after two rounds of
         written test and interview.
       </div>
+      <div className={styles.subsection}>
+        <strong>NUS Hack&Roll: </strong> Hack&Roll is NUS Hackers' annual
+        24-hour hackathon, and the largest student-run hackathon in Singapore.
+        My team won the Top8 prize in Singapore
+      </div>
     </div>
   </div>
 )
@@ -108,18 +113,44 @@ export const examData = (
 export const bukuwarungData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at BukuWarung</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <div>
+          <strong>Internship Period: </strong> May 2021 to August 2021
+        </div>
+        <div>
+          <strong>Role: </strong> Frontend Web Developer Intern
+        </div>
+        <div>
+          <strong>Tech stack: </strong> NextJS,
+        </div>
+      </div>
+      <div className={styles.subsection}>
+        <strong>Responsibilites:</strong>
+      </div>
+    </div>
   </div>
 )
 
 export const zendodoData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at Zendodo</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>Internship Period: </strong> December 2021 to May 2022
+      </div>
+    </div>
   </div>
 )
 
 export const ncsData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at NCS</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>Internship Period: </strong> May 2022 to August 2022
+      </div>
+    </div>
   </div>
 )
 
@@ -149,7 +180,7 @@ export const thinkathonData = (
 
 export const travelData = (
   <div className={styles.container}>
-    <div className={styles.title}>Places I have been</div>
+    <div className={styles.title}>Future Plans/ Projects</div>
   </div>
 )
 
