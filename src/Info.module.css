@@ -30,3 +30,14 @@ strong {
 li {
     padding-bottom: 1rem;
 }
+
+.brandIcon {
+    font-size: 12vw !important;
+    filter: drop-shadow(5px 5px 1px red);
+    transition: all 0.2s ease-in;
+}
+
+.brandIcon:hover {
+    filter: drop-shadow(5px 5px 1px orange);
+    font-size: 13vw !important;
+}

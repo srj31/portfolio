@@ -4,14 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import {
   faGithub,
+  faGithubSquare,
   faInstagram,
   faInstagramSquare,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import { openInNewTab } from './helper'
 
 const uniImages = ['images/nus.png', 'images/iitrpr.png']
 
 const examImages = ['images/IOL.png']
+
+const githubLink = 'https://github.com/srj31'
+const linkedInLink = 'https://www.linkedin.com/in/sourabhrj/'
+const instaLink = 'https://www.instagram.com/__srj__ladds/'
 
 export const uniData = (
   <div className={styles.container}>
@@ -227,8 +233,9 @@ export const contactData = (
           <strong>GitHub</strong>
         </div>
         <FontAwesomeIcon
-          icon={faGithub as IconProp}
-          style={{ fontSize: '10rem' }}
+          icon={faGithubSquare as IconProp}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(githubLink)}
         />
       </div>
       <div>
@@ -237,7 +244,8 @@ export const contactData = (
         </div>
         <FontAwesomeIcon
           icon={faLinkedin as IconProp}
-          style={{ fontSize: '10rem' }}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(linkedInLink)}
         />
       </div>
       <div>
@@ -246,7 +254,8 @@ export const contactData = (
         </div>
         <FontAwesomeIcon
           icon={faInstagramSquare as IconProp}
-          style={{ fontSize: '10rem' }}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(instaLink)}
         />
       </div>
     </div>
