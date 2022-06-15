@@ -158,7 +158,7 @@ export const zendodoData = (
           <strong>Role: </strong> Web Developer Intern
         </div>
         <div>
-          <strong>Tech stack: </strong> NextJS, WAX Blockchain API
+          <strong>Tech stack: </strong> NextJS, WAX Blockchain API, Typescript
         </div>
       </div>
       <div className={styles.subsection}>
