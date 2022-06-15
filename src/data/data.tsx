@@ -186,23 +186,23 @@ export const ncsData = (
       <div className={styles.subsection}>
         <strong>Internship Period: </strong> May 2022 to August 2022
         <div>
-          <strong>Role: </strong> Web Developer Intern
+          <strong>Role: </strong> Software Development Intern
         </div>
         <div>
-          <strong>Tech stack: </strong> NextJS, WAX Blockchain API
+          <strong>Tech stack: </strong> NextJs, TigerGraph, AWS, Spark, VMs,
         </div>
       </div>
       <div className={styles.subsection}>
         <h1>Responsibilites:</h1>
         <ul>
           <li>
-            Developed the gamification aspect for the NFTs owned by the users on
-            the platform, allowing users to earn an active income
+            Developed a custom Dashboard using NextJs and TigerGraph on the
+            backend for the scam detection project, which will be demoed at the
+            NCS Innovation HUB.
           </li>
           <li>
-            Worked with NextJS, React, Typescript, Sass and Zustand and used WAX
-            Blockchain RPC API for fetching data and making transactions on the
-            WAX blockchain
+            Currently working on training on Red Team/ Cybersecurity and setting
+            up the virtual security lab for malware attacks and analysis
           </li>
         </ul>
       </div>
