@@ -161,6 +161,20 @@ export const zendodoData = (
           <strong>Tech stack: </strong> NextJS, WAX Blockchain API
         </div>
       </div>
+      <div className={styles.subsection}>
+        <h1>Responsibilites:</h1>
+        <ul>
+          <li>
+            Developed the gamification aspect for the NFTs owned by the users on
+            the platform, allowing users to earn an active income
+          </li>
+          <li>
+            Worked with NextJS, React, Typescript, Sass and Zustand and used WAX
+            Blockchain RPC API for fetching data and making transactions on the
+            WAX blockchain
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 )
@@ -171,6 +185,26 @@ export const ncsData = (
     <div className={styles.body}>
       <div className={styles.subsection}>
         <strong>Internship Period: </strong> May 2022 to August 2022
+        <div>
+          <strong>Role: </strong> Web Developer Intern
+        </div>
+        <div>
+          <strong>Tech stack: </strong> NextJS, WAX Blockchain API
+        </div>
+      </div>
+      <div className={styles.subsection}>
+        <h1>Responsibilites:</h1>
+        <ul>
+          <li>
+            Developed the gamification aspect for the NFTs owned by the users on
+            the platform, allowing users to earn an active income
+          </li>
+          <li>
+            Worked with NextJS, React, Typescript, Sass and Zustand and used WAX
+            Blockchain RPC API for fetching data and making transactions on the
+            WAX blockchain
+          </li>
+        </ul>
       </div>
     </div>
   </div>
