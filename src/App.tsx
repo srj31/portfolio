@@ -38,7 +38,7 @@ function App() {
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
-        {data['ncs']}
+        {data['contact']}
       </Modal>
     </div>
   )

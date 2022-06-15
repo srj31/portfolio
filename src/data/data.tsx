@@ -1,5 +1,13 @@
 import WovenImageList from '../component/common/WovenImageList'
 import styles from '../Info.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import {
+  faGithub,
+  faInstagram,
+  faInstagramSquare,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 const uniImages = ['images/nus.png', 'images/iitrpr.png']
 
@@ -213,6 +221,35 @@ export const ncsData = (
 export const contactData = (
   <div className={styles.container}>
     <div className={styles.title}>Contact Me here</div>
+    <div className={styles.subsection} style={{ display: 'flex' }}>
+      <div>
+        <div>
+          <strong>GitHub</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faGithub as IconProp}
+          style={{ fontSize: '10rem' }}
+        />
+      </div>
+      <div>
+        <div>
+          <strong>LinkedIn</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faLinkedin as IconProp}
+          style={{ fontSize: '10rem' }}
+        />
+      </div>
+      <div>
+        <div>
+          <strong>Instagram</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faInstagramSquare as IconProp}
+          style={{ fontSize: '10rem' }}
+        />
+      </div>
+    </div>
   </div>
 )
 
