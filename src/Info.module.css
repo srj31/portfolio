@@ -23,3 +23,7 @@ strong {
     font-size: 1.3rem;
     text-shadow: 1px 1px silver;
 }
+
+li {
+    padding-bottom: 1rem;
+}

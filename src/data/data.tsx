@@ -122,11 +122,25 @@ export const bukuwarungData = (
           <strong>Role: </strong> Frontend Web Developer Intern
         </div>
         <div>
-          <strong>Tech stack: </strong> NextJS,
+          <strong>Tech stack: </strong> NextJS, Spring, HTML, CSS
         </div>
       </div>
       <div className={styles.subsection}>
-        <strong>Responsibilites:</strong>
+        <h1>Responsibilites:</h1>
+        <ul>
+          <li>
+            Developed and built features for the e-Commerce platform (tokoko.id)
+          </li>
+          <li>
+            Achieved fluency in NextJS and Context API in order to successfully
+            migrate from Spring and used RESTful APIs to retrieve data from the
+            backend implemented in Spring
+          </li>
+          <li>
+            Collaborated with product managers, testers and developers in a
+            SCRUM environment
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -137,7 +151,15 @@ export const zendodoData = (
     <div className={styles.title}>Internship at Zendodo</div>
     <div className={styles.body}>
       <div className={styles.subsection}>
-        <strong>Internship Period: </strong> December 2021 to May 2022
+        <div>
+          <strong>Internship Period: </strong> December 2021 to May 2022
+        </div>
+        <div>
+          <strong>Role: </strong> Web Developer Intern
+        </div>
+        <div>
+          <strong>Tech stack: </strong> NextJS, WAX Blockchain API
+        </div>
       </div>
     </div>
   </div>
