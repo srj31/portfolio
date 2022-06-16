@@ -19,7 +19,7 @@
     margin-bottom: 4vh;
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 strong {
@@ -33,13 +33,37 @@ li {
 }
 
 .brandIcon {
-    font-size: 12vw !important;
+    font-size: 10vw !important;
     filter: drop-shadow(5px 5px 1px gray);
     transition: all 0.2s ease-in;
 }
 
 .brandIcon:hover {
     filter: drop-shadow(7px 7px 2px rgb(179, 179, 179));
-    font-size: 12.2vw !important;
+    font-size: 10.2vw !important;
     cursor: pointer;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: white;
+    transition: color 0.5s;
+}
+
+.icon:hover {
+    color: black;
+}
+
+.icon img {
+    width: 3vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }

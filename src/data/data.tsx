@@ -3,26 +3,32 @@ import styles from '../Info.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import {
-  faGithub,
   faGithubSquare,
-  faInstagram,
   faInstagramSquare,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import { openInNewTab } from './helper'
+import { faD, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import {
-  faD,
-  faLink,
-  faSquareArrowUpRight,
-} from '@fortawesome/free-solid-svg-icons'
-import {
+  awsIcon,
+  cppIcon,
   devpostLink,
   examImages,
   githubLink,
+  gitIcon,
   instaLink,
+  javaIcon,
   linkedInLink,
   masterWordGitLink,
   masterWordLink,
+  mongoIcon,
+  mysqlIcon,
+  nodeIcon,
+  pythonIcon,
+  reactIcon,
+  sassIcon,
+  tigergraphIcon,
+  typescriptIcon,
   uniImages,
 } from './constants'
 
@@ -274,18 +280,22 @@ export const masterwordData = (
     <div className={styles.title}>Masterword at NUS HackNRoll2022</div>
     <div className={styles.subsection}>
       <strong>The Game</strong>
-      Master Word is a word game similar to the popular game Wordle, that allows
-      you to test your puzzle skills while teasing you by giving you the
-      information about how close you are to the answer. A word is picked at
-      random by the computer from the English dictionary which the player is
-      supposed to guess. The guess can only be a valid English word. The player
-      gets a fixed number of tries for every word, and after each guess, the
-      player is told how many alphabets in their guess overlap the ones in the
-      given word, and moreover, how many of them are in the right position, thus
-      acting as hints and enabling the player to solve the puzzle. Further you
-      can change the difficulty based on word length you choose. The game was
-      developed for the 24 hour NUS HacknRoll 2022 Hackathon, which was awarded
-      the top 8 project
+      <ul>
+        <li>
+          Master Word is a word game similar to the popular game Wordle, that
+          allows you to test your puzzle skills while teasing you by giving you
+          the information about how close you are to the answer. A word is
+          picked at random by the computer from the English dictionary which the
+          player is supposed to guess. The guess can only be a valid English
+          word. The player gets a fixed number of tries for every word, and
+          after each guess, the player is told how many alphabets in their guess
+          overlap the ones in the given word, and moreover, how many of them are
+          in the right position, thus acting as hints and enabling the player to
+          solve the puzzle. Further you can change the difficulty based on word
+          length you choose. The game was developed for the 24 hour NUS
+          HacknRoll 2022 Hackathon, which was awarded the top 8 project
+        </li>
+      </ul>
     </div>
     <div className={styles.subsection}>
       <div>
@@ -324,7 +334,65 @@ export const masterwordData = (
 
 export const toolsData = (
   <div className={styles.container}>
-    <div className={styles.title}>Tools I am Good at</div>
+    <div className={styles.title}>Tools</div>
+    <div className={styles.subsection}>
+      <strong>I am good at: </strong>
+      <div className={styles.icons}>
+        <div className={styles.icon}>
+          <img src={javaIcon} />
+          <div>Java</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={typescriptIcon} />
+          <div>Typescript</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={reactIcon} />
+          <div>React</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={cppIcon} />
+          <div>C++</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={gitIcon} />
+          <div>Git</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={sassIcon} />
+          <div>Sass</div>
+        </div>
+      </div>
+    </div>
+    <div className={styles.subsection}>
+      <strong>I have tried:</strong>
+      <div className={styles.icons}>
+        <div className={styles.icon}>
+          <img src={mysqlIcon} />
+          <div>MySql</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={nodeIcon} />
+          <div>NodeJs</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={tigergraphIcon} />
+          <div>TigerGraph</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={awsIcon} />
+          <div>AWS</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={mongoIcon} />
+          <div>MongoDB</div>
+        </div>
+        <div className={styles.icon}>
+          <img src={pythonIcon} />
+          <div>Python</div>
+        </div>
+      </div>
+    </div>
   </div>
 )
 
