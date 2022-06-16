@@ -212,7 +212,9 @@ export const ncsData = (
     <div className={styles.title}>Internship at NCS</div>
     <div className={styles.body}>
       <div className={styles.subsection} style={{ flexDirection: 'column' }}>
-        <strong>Internship Period: </strong> May 2022 to August 2022
+        <div>
+          <strong>Internship Period: </strong> May 2022 to August 2022
+        </div>
         <div>
           <strong>Role: </strong> Software Development Intern
         </div>
