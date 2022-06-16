@@ -128,7 +128,7 @@ export const bukuwarungData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at BukuWarung</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
+      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <div>
           <strong>Internship Period: </strong> May 2021 to August 2021
         </div>
@@ -164,7 +164,7 @@ export const zendodoData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at Zendodo</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
+      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <div>
           <strong>Internship Period: </strong> December 2021 to May 2022
         </div>
@@ -197,7 +197,7 @@ export const ncsData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at NCS</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
+      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <strong>Internship Period: </strong> May 2022 to August 2022
         <div>
           <strong>Role: </strong> Software Development Intern
@@ -227,7 +227,7 @@ export const ncsData = (
 export const contactData = (
   <div className={styles.container}>
     <div className={styles.title}>Contact Me here</div>
-    <div className={styles.subsection} style={{ display: 'flex' }}>
+    <div className={styles.subsection}>
       <div>
         <div>
           <strong>GitHub</strong>
