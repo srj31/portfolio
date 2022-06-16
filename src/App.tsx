@@ -24,22 +24,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <Modal
+      {/* <Modal
         open={open}
         height={'80vh'}
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
         {modal}
-      </Modal>
-      {/* <Modal
+      </Modal> */}
+      <Modal
         open={true}
         height={'80vh'}
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
-        {data['contact']}
-      </Modal> */}
+        {data['masterword']}
+      </Modal>
     </div>
   )
 }

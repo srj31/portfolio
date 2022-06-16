@@ -1953,15 +1953,15 @@
                  "rotation":0,
                  "text":
                     {
-                     "text":"Travel",
+                     "text":"Upcoming Projects",
                      "valign":"center",
                      "wrap":true
                     },
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1489.81763933784,
-                 "y":1181.26622294054
+                 "x":1489.82,
+                 "y":1181.27
                 }, 
                 {
                  "height":36.0936,
@@ -2096,8 +2096,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1310.37223753551,
-                 "y":951.685788892154
+                 "x":1310.37,
+                 "y":951.686
                 }, 
                 {
                  "height":36.0936,
@@ -2113,8 +2113,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1551.03214545989,
-                 "y":858.580293740817
+                 "x":1551.03,
+                 "y":858.58
                 }],
          "opacity":1,
          "type":"objectgroup",

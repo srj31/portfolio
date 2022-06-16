@@ -19,12 +19,13 @@
     margin-bottom: 4vh;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 strong {
     font-size: 1.3rem;
     text-shadow: 1px 1px silver;
+    padding-right: 0.5rem;
 }
 
 li {
@@ -39,5 +40,6 @@ li {
 
 .brandIcon:hover {
     filter: drop-shadow(7px 7px 2px rgb(179, 179, 179));
-    font-size: 13vw !important;
+    font-size: 12.2vw !important;
+    cursor: pointer;
 }

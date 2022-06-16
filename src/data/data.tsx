@@ -10,14 +10,21 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
 import { openInNewTab } from './helper'
-
-const uniImages = ['images/nus.png', 'images/iitrpr.png']
-
-const examImages = ['images/IOL.png']
-
-const githubLink = 'https://github.com/srj31'
-const linkedInLink = 'https://www.linkedin.com/in/sourabhrj/'
-const instaLink = 'https://www.instagram.com/__srj__ladds/'
+import {
+  faD,
+  faLink,
+  faSquareArrowUpRight,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  devpostLink,
+  examImages,
+  githubLink,
+  instaLink,
+  linkedInLink,
+  masterWordGitLink,
+  masterWordLink,
+  uniImages,
+} from './constants'
 
 export const uniData = (
   <div className={styles.container}>
@@ -265,6 +272,53 @@ export const contactData = (
 export const masterwordData = (
   <div className={styles.container}>
     <div className={styles.title}>Masterword at NUS HackNRoll2022</div>
+    <div className={styles.subsection}>
+      <strong>The Game</strong>
+      Master Word is a word game similar to the popular game Wordle, that allows
+      you to test your puzzle skills while teasing you by giving you the
+      information about how close you are to the answer. A word is picked at
+      random by the computer from the English dictionary which the player is
+      supposed to guess. The guess can only be a valid English word. The player
+      gets a fixed number of tries for every word, and after each guess, the
+      player is told how many alphabets in their guess overlap the ones in the
+      given word, and moreover, how many of them are in the right position, thus
+      acting as hints and enabling the player to solve the puzzle. Further you
+      can change the difficulty based on word length you choose. The game was
+      developed for the 24 hour NUS HacknRoll 2022 Hackathon, which was awarded
+      the top 8 project
+    </div>
+    <div className={styles.subsection}>
+      <div>
+        <div>
+          <strong>GitHub Repo</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faGithubSquare as IconProp}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(masterWordGitLink)}
+        />
+      </div>
+      <div>
+        <div>
+          <strong>DevPost Link</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faD as IconProp}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(devpostLink)}
+        />
+      </div>
+      <div>
+        <div>
+          <strong>Game Link</strong>
+        </div>
+        <FontAwesomeIcon
+          icon={faSquareArrowUpRight as IconProp}
+          className={styles.brandIcon}
+          onClick={() => openInNewTab(masterWordLink)}
+        />
+      </div>
+    </div>
   </div>
 )
 
