@@ -33,11 +33,11 @@ li {
 
 .brandIcon {
     font-size: 12vw !important;
-    filter: drop-shadow(5px 5px 1px red);
+    filter: drop-shadow(5px 5px 1px gray);
     transition: all 0.2s ease-in;
 }
 
 .brandIcon:hover {
-    filter: drop-shadow(5px 5px 1px orange);
+    filter: drop-shadow(7px 7px 2px rgb(179, 179, 179));
     font-size: 13vw !important;
 }
