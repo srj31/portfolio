@@ -29,6 +29,7 @@ import {
   sassIcon,
   tigergraphIcon,
   typescriptIcon,
+  underConstruction,
   uniImages,
 } from './constants'
 
@@ -240,36 +241,38 @@ export const ncsData = (
 export const contactData = (
   <div className={styles.container}>
     <div className={styles.title}>Contact Me here</div>
-    <div className={styles.subsection}>
-      <div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
         <div>
-          <strong>GitHub</strong>
+          <div>
+            <strong>GitHub</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faGithubSquare as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(githubLink)}
+          />
         </div>
-        <FontAwesomeIcon
-          icon={faGithubSquare as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(githubLink)}
-        />
-      </div>
-      <div>
         <div>
-          <strong>LinkedIn</strong>
+          <div>
+            <strong>LinkedIn</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faLinkedin as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(linkedInLink)}
+          />
         </div>
-        <FontAwesomeIcon
-          icon={faLinkedin as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(linkedInLink)}
-        />
-      </div>
-      <div>
         <div>
-          <strong>Instagram</strong>
+          <div>
+            <strong>Instagram</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faInstagramSquare as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(instaLink)}
+          />
         </div>
-        <FontAwesomeIcon
-          icon={faInstagramSquare as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(instaLink)}
-        />
       </div>
     </div>
   </div>
@@ -278,55 +281,58 @@ export const contactData = (
 export const masterwordData = (
   <div className={styles.container}>
     <div className={styles.title}>Masterword at NUS HackNRoll2022</div>
-    <div className={styles.subsection}>
-      <strong>The Game</strong>
-      <ul>
-        <li>
-          Master Word is a word game similar to the popular game Wordle, that
-          allows you to test your puzzle skills while teasing you by giving you
-          the information about how close you are to the answer. A word is
-          picked at random by the computer from the English dictionary which the
-          player is supposed to guess. The guess can only be a valid English
-          word. The player gets a fixed number of tries for every word, and
-          after each guess, the player is told how many alphabets in their guess
-          overlap the ones in the given word, and moreover, how many of them are
-          in the right position, thus acting as hints and enabling the player to
-          solve the puzzle. Further you can change the difficulty based on word
-          length you choose. The game was developed for the 24 hour NUS
-          HacknRoll 2022 Hackathon, which was awarded the top 8 project
-        </li>
-      </ul>
-    </div>
-    <div className={styles.subsection}>
-      <div>
-        <div>
-          <strong>GitHub Repo</strong>
-        </div>
-        <FontAwesomeIcon
-          icon={faGithubSquare as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(masterWordGitLink)}
-        />
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>The Game</strong>
+        <ul>
+          <li>
+            Master Word is a word game similar to the popular game Wordle, that
+            allows you to test your puzzle skills while teasing you by giving
+            you the information about how close you are to the answer. A word is
+            picked at random by the computer from the English dictionary which
+            the player is supposed to guess. The guess can only be a valid
+            English word. The player gets a fixed number of tries for every
+            word, and after each guess, the player is told how many alphabets in
+            their guess overlap the ones in the given word, and moreover, how
+            many of them are in the right position, thus acting as hints and
+            enabling the player to solve the puzzle. Further you can change the
+            difficulty based on word length you choose. The game was developed
+            for the 24 hour NUS HacknRoll 2022 Hackathon, which was awarded the
+            top 8 project
+          </li>
+        </ul>
       </div>
-      <div>
+      <div className={styles.subsection}>
         <div>
-          <strong>DevPost Link</strong>
+          <div>
+            <strong>GitHub Repo</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faGithubSquare as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(masterWordGitLink)}
+          />
         </div>
-        <FontAwesomeIcon
-          icon={faD as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(devpostLink)}
-        />
-      </div>
-      <div>
         <div>
-          <strong>Game Link</strong>
+          <div>
+            <strong>DevPost Link</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faD as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(devpostLink)}
+          />
         </div>
-        <FontAwesomeIcon
-          icon={faSquareArrowUpRight as IconProp}
-          className={styles.brandIcon}
-          onClick={() => openInNewTab(masterWordLink)}
-        />
+        <div>
+          <div>
+            <strong>Game Link</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faSquareArrowUpRight as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(masterWordLink)}
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -335,61 +341,63 @@ export const masterwordData = (
 export const toolsData = (
   <div className={styles.container}>
     <div className={styles.title}>Tools</div>
-    <div className={styles.subsection}>
-      <strong>I am good at: </strong>
-      <div className={styles.icons}>
-        <div className={styles.icon}>
-          <img src={javaIcon} />
-          <div>Java</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={typescriptIcon} />
-          <div>Typescript</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={reactIcon} />
-          <div>React</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={cppIcon} />
-          <div>C++</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={gitIcon} />
-          <div>Git</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={sassIcon} />
-          <div>Sass</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>I am good at: </strong>
+        <div className={styles.icons}>
+          <div className={styles.icon}>
+            <img src={javaIcon} />
+            <div>Java</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={typescriptIcon} />
+            <div>Typescript</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={reactIcon} />
+            <div>React</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={cppIcon} />
+            <div>C++</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={gitIcon} />
+            <div>Git</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={sassIcon} />
+            <div>Sass</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div className={styles.subsection}>
-      <strong>I have tried:</strong>
-      <div className={styles.icons}>
-        <div className={styles.icon}>
-          <img src={mysqlIcon} />
-          <div>MySql</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={nodeIcon} />
-          <div>NodeJs</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={tigergraphIcon} />
-          <div>TigerGraph</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={awsIcon} />
-          <div>AWS</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={mongoIcon} />
-          <div>MongoDB</div>
-        </div>
-        <div className={styles.icon}>
-          <img src={pythonIcon} />
-          <div>Python</div>
+      <div className={styles.subsection}>
+        <strong>I have tried:</strong>
+        <div className={styles.icons}>
+          <div className={styles.icon}>
+            <img src={mysqlIcon} />
+            <div>MySql</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={nodeIcon} />
+            <div>NodeJs</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={tigergraphIcon} />
+            <div>TigerGraph</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={awsIcon} />
+            <div>AWS</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={mongoIcon} />
+            <div>MongoDB</div>
+          </div>
+          <div className={styles.icon}>
+            <img src={pythonIcon} />
+            <div>Python</div>
+          </div>
         </div>
       </div>
     </div>
@@ -399,17 +407,35 @@ export const toolsData = (
 export const thinkathonData = (
   <div className={styles.container}>
     <div className={styles.title}>Winning NCS Thinkathon</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>Under Construction</strong>
+        <img src={underConstruction} />
+      </div>
+    </div>
   </div>
 )
 
 export const travelData = (
   <div className={styles.container}>
     <div className={styles.title}>Future Plans/ Projects</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>Under Construction</strong>
+        <img src={underConstruction} />
+      </div>
+    </div>
   </div>
 )
 
 export const hobbiesData = (
   <div className={styles.container}>
     <div className={styles.title}>My Hobbies</div>
+    <div className={styles.body}>
+      <div className={styles.subsection}>
+        <strong>Under Construction</strong>
+        <img src={underConstruction} />
+      </div>
+    </div>
   </div>
 )

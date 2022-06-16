@@ -38,7 +38,7 @@ function App() {
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
       >
-        {data['tools']}
+        {data['travel']}
       </Modal>
     </div>
   )

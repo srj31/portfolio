@@ -1,6 +1,7 @@
 export const uniImages = ['images/nus.png', 'images/iitrpr.png']
-
 export const examImages = ['images/IOL.png']
+
+export const underConstruction = 'images/under_construction.gif'
 
 export const githubLink = 'https://github.com/srj31'
 export const linkedInLink = 'https://www.linkedin.com/in/sourabhrj/'
