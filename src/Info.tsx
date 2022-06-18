@@ -11,6 +11,7 @@ import {
   travelData,
   tutorData,
   uniData,
+  welcomeData,
   zendodoData,
 } from './data/data'
 
@@ -31,4 +32,5 @@ export const data: messageDict = {
   tools: toolsData,
   travel: travelData,
   hobbies: hobbiesData,
+  welcome: welcomeData,
 }

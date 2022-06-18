@@ -31,7 +31,34 @@ import {
   typescriptIcon,
   underConstruction,
   uniImages,
+  welcomeImages,
 } from './constants'
+
+export const welcomeData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Welcome to My Portfolio</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={welcomeImages} cols={1} />
+    </div>
+    <div className={styles.body}>
+      <div className={styles.section}>
+        <strong>Hello! I'm Sourabh and I love building stuff</strong>
+        <div style={{ paddingBottom: '1rem', fontWeight: 500 }}>
+          Preferably Software but have worked on Cybersecurity as well :)
+        </div>
+        <div style={{ paddingBottom: '1rem' }}>
+          {' '}
+          To know more about me, my skills and experiences walk around with
+          arrow keys and walk upto the buttons (similar to the image) at each
+          section and press E to get more information{' '}
+        </div>
+        <div>
+          <strong>Thank you</strong> for checking this out
+        </div>
+      </div>
+    </div>
+  </div>
+)
 
 export const uniData = (
   <div className={styles.container}>

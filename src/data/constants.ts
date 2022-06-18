@@ -1,5 +1,9 @@
 export const uniImages = ['images/nus.png', 'images/iitrpr.png']
 export const examImages = ['images/IOL.png']
+export const welcomeImages = [
+  'images/welcomeButton.png',
+  'images/welcomeButtonMessage.png',
+]
 
 export const underConstruction = 'images/under_construction.gif'
 

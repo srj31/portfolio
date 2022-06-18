@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="209">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="213">
  <editorsettings>
   <export target="map1.json" format="json"/>
  </editorsettings>
@@ -416,6 +416,11 @@
     <property name="type" value="hobbies"/>
    </properties>
   </object>
+  <object id="210" gid="686" x="943.323" y="640.936" width="32" height="32">
+   <properties>
+    <property name="type" value="welcome"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="15" name="statue">
   <object id="32" gid="5065" x="544.126" y="127.389" width="32" height="32"/>
@@ -545,6 +550,9 @@
   </object>
   <object id="208" x="1551.03" y="858.58" width="137.606" height="36.0936">
    <text wrap="1" valign="center">Hobbies</text>
+  </object>
+  <object id="212" x="908.085" y="558.111" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Welcome</text>
   </object>
  </objectgroup>
 </map>
