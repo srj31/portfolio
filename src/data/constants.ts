@@ -4,6 +4,9 @@ export const welcomeImages = [
   'images/welcomeButton.png',
   'images/welcomeButtonMessage.png',
 ]
+export const zendodoImages = ['images/zendodo.png']
+export const bukuwarungImages = ['images/bukuwarung.png']
+export const ncsImages = ['images/ncs.png']
 
 export const underConstruction = 'images/under_construction.gif'
 

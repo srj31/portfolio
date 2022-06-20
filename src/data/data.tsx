@@ -11,6 +11,7 @@ import { openInNewTab } from './helper'
 import { faD, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import {
   awsIcon,
+  bukuwarungImages,
   cppIcon,
   devpostLink,
   examImages,
@@ -23,6 +24,7 @@ import {
   masterWordLink,
   mongoIcon,
   mysqlIcon,
+  ncsImages,
   nodeIcon,
   pythonIcon,
   reactIcon,
@@ -32,6 +34,7 @@ import {
   underConstruction,
   uniImages,
   welcomeImages,
+  zendodoImages,
 } from './constants'
 
 export const welcomeData = (
@@ -169,6 +172,9 @@ export const examData = (
 export const bukuwarungData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at BukuWarung</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={bukuwarungImages} cols={1} />
+    </div>
     <div className={styles.body}>
       <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <div>
@@ -205,6 +211,9 @@ export const bukuwarungData = (
 export const zendodoData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at Zendodo</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={zendodoImages} cols={1} />
+    </div>
     <div className={styles.body}>
       <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <div>
@@ -238,6 +247,9 @@ export const zendodoData = (
 export const ncsData = (
   <div className={styles.container}>
     <div className={styles.title}>Internship at NCS</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={ncsImages} cols={1} />
+    </div>
     <div className={styles.body}>
       <div className={styles.subsection} style={{ flexDirection: 'column' }}>
         <div>
