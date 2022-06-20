@@ -1,0 +1,25 @@
+.container {
+    position: absolute;
+    background: rgb(0, 0, 0, 0.2);
+    top: 10vh;
+    padding: 1vw;
+    color: blanchedalmond;
+    font-weight: 500;
+    width: 10vw;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding-bottom: 2vh;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconImages {
+    width: 5vw;
+    object-fit: contain;
+}

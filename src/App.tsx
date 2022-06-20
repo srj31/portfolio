@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Info from './component/Info/Info'
 import Modal from './component/Modal/Modal'
- import { ButtonInteraction } from './objects/Interaction'
+import { ButtonInteraction } from './objects/Interaction'
 
 function App() {
   const [open, setOpen] = useState<boolean>(false)
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Info />
       <Modal
         open={open}
         height={'80vh'}
