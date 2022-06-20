@@ -1,11 +1,13 @@
 // GameObject avatar
 import Phaser from 'phaser'
+import { runInThisContext } from 'vm'
 import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
   speed = 300
   y_offset = 15
+  can_move = true
   constructor(
     scene: Phaser.Scene,
     x: number,
@@ -77,6 +79,14 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     this.player.body.offset.y = this.y_offset
   }
 
+  stopMovement() {
+    this.can_move = false
+  }
+
+  startMovement() {
+    this.can_move = true
+  }
+
   update(
     keyA: Phaser.Input.Keyboard.Key,
     keyD: Phaser.Input.Keyboard.Key,
@@ -85,18 +95,27 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     keyE: Phaser.Input.Keyboard.Key,
   ) {
     this.player.setVelocity(0, 0)
-    if (keyA.isDown) {
-      this.player.setVelocityX(-this.speed)
-      this.player.anims.play('left', true)
-    } else if (keyS.isDown) {
-      this.player.setVelocityY(this.speed)
-      this.player.anims.play('down', true)
-    } else if (keyD.isDown) {
-      this.player.setVelocityX(this.speed)
-      this.player.anims.play('right', true)
-    } else if (keyW.isDown) {
-      this.player.setVelocityY(-this.speed)
-      this.player.anims.play('up', true)
+    if (this.can_move) {
+      if (keyA.isDown) {
+        this.player.setVelocityX(-this.speed)
+        this.player.anims.play('left', true)
+      } else if (keyS.isDown) {
+        this.player.setVelocityY(this.speed)
+        this.player.anims.play('down', true)
+      } else if (keyD.isDown) {
+        this.player.setVelocityX(this.speed)
+        this.player.anims.play('right', true)
+      } else if (keyW.isDown) {
+        this.player.setVelocityY(-this.speed)
+        this.player.anims.play('up', true)
+      } else {
+        this.player.scene.time.delayedCall(
+          0.15 * 1000,
+          () => this.player.anims.play('still', true),
+          [],
+          this.player,
+        )
+      }
     } else {
       this.player.scene.time.delayedCall(
         0.15 * 1000,
