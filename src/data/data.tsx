@@ -50,7 +50,8 @@ export const welcomeData = (
           {' '}
           To know more about me, my skills and experiences walk around with
           arrow keys and walk upto the buttons (similar to the image) at each
-          section and press E to get more information{' '}
+          section and press E to get more information . Press E again or click
+          outside the message to close it.
         </div>
         <div>
           <strong>Thank you</strong> for checking this out
