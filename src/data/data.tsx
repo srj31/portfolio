@@ -376,27 +376,27 @@ export const toolsData = (
         <strong>I am good at: </strong>
         <div className={styles.icons}>
           <div className={styles.icon}>
-            <img src={javaIcon} />
+            <img src={javaIcon} alt={'java icon'} />
             <div>Java</div>
           </div>
           <div className={styles.icon}>
-            <img src={typescriptIcon} />
+            <img src={typescriptIcon} alt={'typescript icon'} />
             <div>Typescript</div>
           </div>
           <div className={styles.icon}>
-            <img src={reactIcon} />
+            <img src={reactIcon} alt={'react icon'} />
             <div>React</div>
           </div>
           <div className={styles.icon}>
-            <img src={cppIcon} />
+            <img src={cppIcon} alt={'C++ icon'} />
             <div>C++</div>
           </div>
           <div className={styles.icon}>
-            <img src={gitIcon} />
+            <img src={gitIcon} alt={'GitHub Icon'} />
             <div>Git</div>
           </div>
           <div className={styles.icon}>
-            <img src={sassIcon} />
+            <img src={sassIcon} alt={'Sass Icon'} />
             <div>Sass</div>
           </div>
         </div>
@@ -405,27 +405,27 @@ export const toolsData = (
         <strong>I have tried:</strong>
         <div className={styles.icons}>
           <div className={styles.icon}>
-            <img src={mysqlIcon} />
+            <img src={mysqlIcon} alt={'MySql Icon'} />
             <div>MySql</div>
           </div>
           <div className={styles.icon}>
-            <img src={nodeIcon} />
+            <img src={nodeIcon} alt={'NodeJs Icon'} />
             <div>NodeJs</div>
           </div>
           <div className={styles.icon}>
-            <img src={tigergraphIcon} />
+            <img src={tigergraphIcon} alt={'TigerGraph Icon'} />
             <div>TigerGraph</div>
           </div>
           <div className={styles.icon}>
-            <img src={awsIcon} />
+            <img src={awsIcon} alt={'AWS Icon'} />
             <div>AWS</div>
           </div>
           <div className={styles.icon}>
-            <img src={mongoIcon} />
+            <img src={mongoIcon} alt={'MongoDB Icon'} />
             <div>MongoDB</div>
           </div>
           <div className={styles.icon}>
-            <img src={pythonIcon} />
+            <img src={pythonIcon} alt={'Python Icon'} />
             <div>Python</div>
           </div>
         </div>
@@ -440,7 +440,7 @@ export const thinkathonData = (
     <div className={styles.body}>
       <div className={styles.subsection}>
         <strong>Under Construction</strong>
-        <img src={underConstruction} />
+        <img src={underConstruction} alt={'under construction gif'} />
       </div>
     </div>
   </div>
@@ -452,7 +452,7 @@ export const travelData = (
     <div className={styles.body}>
       <div className={styles.subsection}>
         <strong>Under Construction</strong>
-        <img src={underConstruction} />
+        <img src={underConstruction} alt={'under construction gif'} />
       </div>
     </div>
   </div>
@@ -464,7 +464,7 @@ export const hobbiesData = (
     <div className={styles.body}>
       <div className={styles.subsection}>
         <strong>Under Construction</strong>
-        <img src={underConstruction} />
+        <img src={underConstruction} alt={'under construction gif'} />
       </div>
     </div>
   </div>

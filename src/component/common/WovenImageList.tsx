@@ -1,5 +1,4 @@
 import ImageList from '@mui/material/ImageList'
-import ImageListItem from '@mui/material/ImageListItem'
 import styles from './WovenImageList.module.css'
 
 interface WovenImageListProp {
@@ -26,6 +25,7 @@ export default function WovenImageList({ imgList, cols }: WovenImageListProp) {
           loading="lazy"
           className={styles.image}
           key={img}
+          alt={'for Modal'}
         />
       ))}
     </ImageList>

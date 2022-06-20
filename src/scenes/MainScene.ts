@@ -3,11 +3,6 @@ import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
 import { createWorld } from './helper'
 
-let keyA: Phaser.Input.Keyboard.Key
-let keyS: Phaser.Input.Keyboard.Key
-let keyD: Phaser.Input.Keyboard.Key
-let keyW: Phaser.Input.Keyboard.Key
-
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
   mapHeight = 1270
@@ -82,7 +77,7 @@ export default class MainScene extends Phaser.Scene {
 
     const tilesets = [tileset1, tileset2, tileset3, tileset4, tileset5]
 
-    const worldLayer = createWorld(this, this.avatar.player, map, tilesets)
+    const worldLayers = createWorld(this, this.avatar.player, map, tilesets)
 
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)

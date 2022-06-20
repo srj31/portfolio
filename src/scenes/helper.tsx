@@ -25,9 +25,7 @@ export const createWorld = (
     pathlayer,
     dirtlayer,
     boundarylayer,
-    dirtpathlayer,
     decorCollidablelayer,
-    decorUncollidablelayer,
   } = layers
 
   addGroupFromTiled(scene, map, sprite, 'pillar', tilesets, false, 100)
@@ -38,7 +36,6 @@ export const createWorld = (
 
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
 
-  const textGroup = scene.physics.add.staticGroup()
   const textObject = map.getObjectLayer('text')
   textObject.objects.forEach((textObject) => {
     const actualX = textObject.x! + textObject.width! * 0.1

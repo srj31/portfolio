@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Modal from './component/Modal/Modal'
-import { data } from './Info'
-import { ButtonInteraction } from './objects/Interaction'
+ import { ButtonInteraction } from './objects/Interaction'
 
 function App() {
   const [open, setOpen] = useState<boolean>(false)
