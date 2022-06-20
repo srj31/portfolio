@@ -78,20 +78,23 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
   }
 
   update(
-    cursors: Phaser.Types.Input.Keyboard.CursorKeys,
+    keyA: Phaser.Input.Keyboard.Key,
+    keyD: Phaser.Input.Keyboard.Key,
+    keyS: Phaser.Input.Keyboard.Key,
+    keyW: Phaser.Input.Keyboard.Key,
     keyE: Phaser.Input.Keyboard.Key,
   ) {
     this.player.setVelocity(0, 0)
-    if (cursors.left.isDown) {
+    if (keyA.isDown) {
       this.player.setVelocityX(-this.speed)
       this.player.anims.play('left', true)
-    } else if (cursors.down.isDown) {
+    } else if (keyS.isDown) {
       this.player.setVelocityY(this.speed)
       this.player.anims.play('down', true)
-    } else if (cursors.right.isDown) {
+    } else if (keyD.isDown) {
       this.player.setVelocityX(this.speed)
       this.player.anims.play('right', true)
-    } else if (cursors.up.isDown) {
+    } else if (keyW.isDown) {
       this.player.setVelocityY(-this.speed)
       this.player.anims.play('up', true)
     } else {

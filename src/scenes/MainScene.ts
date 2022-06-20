@@ -3,13 +3,20 @@ import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
 import { createWorld } from './helper'
 
-var cursors: Phaser.Types.Input.Keyboard.CursorKeys
+let keyA: Phaser.Input.Keyboard.Key
+let keyS: Phaser.Input.Keyboard.Key
+let keyD: Phaser.Input.Keyboard.Key
+let keyW: Phaser.Input.Keyboard.Key
 
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
   mapHeight = 1270
   mapWidth = 1920
   private keyE!: Phaser.Input.Keyboard.Key
+  private keyA!: Phaser.Input.Keyboard.Key
+  private keyS!: Phaser.Input.Keyboard.Key
+  private keyD!: Phaser.Input.Keyboard.Key
+  private keyW!: Phaser.Input.Keyboard.Key
   constructor() {
     super('MainScene')
   }
@@ -55,14 +62,16 @@ export default class MainScene extends Phaser.Scene {
       'avatar',
       0,
     )
+    this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
+    this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+    this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
+    this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
     this.keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E)
 
     ButtonInteraction.avatar = this.avatar
 
     this.avatar.player.depth = 1
     this.physics.add.existing(this.avatar.player)
-
-    cursors = this.input.keyboard.createCursorKeys()
 
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
     const tileset1 = map.addTilesetImage('terrain_atlas', 'terrain_atlas')
@@ -85,6 +94,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
-    this.avatar.update(cursors, this.keyE)
+    this.avatar.update(this.keyA, this.keyD, this.keyS, this.keyW, this.keyE)
   }
 }
