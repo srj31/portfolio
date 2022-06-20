@@ -32,14 +32,6 @@ function App() {
       >
         {modal}
       </Modal>
-      {/* <Modal
-        open={true}
-        height={'80vh'}
-        width={'50vw'}
-        handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}
-      >
-        {data['travel']}
-      </Modal> */}
     </div>
   )
 }
