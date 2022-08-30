@@ -24,7 +24,7 @@ export const data: messageDict = {
   tutor: tutorData,
   exam: examData,
   bukuwarung: bukuwarungData,
-  ncs: ncsData,
+  singtel: ncsData,
   zendodo: zendodoData,
   contact: contactData,
   masterword: masterwordData,

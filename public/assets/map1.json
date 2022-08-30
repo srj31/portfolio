@@ -839,7 +839,7 @@
                         {
                          "name":"type",
                          "type":"string",
-                         "value":"ncs"
+                         "value":"singtel"
                         }],
                  "rotation":0,
                  "type":"",
@@ -1954,7 +1954,7 @@
                  "rotation":0,
                  "text":
                     {
-                     "text":"NCS",
+                     "text":"Singtel/NCS",
                      "valign":"center",
                      "wrap":true
                     },

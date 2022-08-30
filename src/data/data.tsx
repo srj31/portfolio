@@ -246,7 +246,7 @@ export const zendodoData = (
 
 export const ncsData = (
   <div className={styles.container}>
-    <div className={styles.title}>Internship at NCS</div>
+    <div className={styles.title}>Internship at Singtel/NCS</div>
     <div className={styles.images}>
       <WovenImageList imgList={ncsImages} cols={1} />
     </div>
@@ -272,7 +272,8 @@ export const ncsData = (
           </li>
           <li>
             Currently working on training on Red Team/ Cybersecurity and setting
-            up the virtual security lab for malware attacks and analysis
+            up the virtual security lab for malware attacks and analysis. To be
+            presented at the OT-IASC Summit
           </li>
         </ul>
       </div>
