@@ -36,3 +36,23 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.cross {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    font-size: 2rem;
+    background-color: #a52a2a;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.cross:hover {
+    background-color: #882222;
+}

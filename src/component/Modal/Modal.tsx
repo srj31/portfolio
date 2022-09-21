@@ -15,6 +15,9 @@ const Modal = ({ open, height, width, children, handleClose }: ModalProp) => {
       {open && (
         <>
           <div className={styles.container} style={{ height, width }}>
+            <div className={styles.cross} onClick={handleClose}>
+              x
+            </div>
             <div className={styles.body}>{children}</div>
           </div>
           <div className={styles.backdrop} onClick={handleClose} />
