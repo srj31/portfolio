@@ -383,7 +383,7 @@
   </object>
   <object id="77" gid="3730" x="1625.48" y="420" width="32" height="32">
    <properties>
-    <property name="type" value="thinkathon"/>
+    <property name="type" value="codeToImpact"/>
    </properties>
   </object>
   <object id="94" gid="2293" x="290.76" y="863.284" width="32" height="32">
@@ -531,7 +531,7 @@
    <text wrap="1" valign="center">Tools</text>
   </object>
   <object id="201" x="1572.4" y="302.308" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">NCS Thinkathon</text>
+   <text wrap="1" valign="center">GIC CodeToImpact</text>
   </object>
   <object id="202" x="819.566" y="448.932" width="137.606" height="36.0936">
    <text wrap="1" valign="center">Education</text>

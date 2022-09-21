@@ -785,7 +785,7 @@
                         {
                          "name":"type",
                          "type":"string",
-                         "value":"thinkathon"
+                         "value":"codeToImpact"
                         }],
                  "rotation":0,
                  "type":"",
@@ -2022,7 +2022,7 @@
                  "rotation":0,
                  "text":
                     {
-                     "text":"NCS Thinkathon",
+                     "text":"GIC CodeToImpact",
                      "valign":"center",
                      "wrap":true
                     },

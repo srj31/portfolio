@@ -12,6 +12,8 @@ import { faD, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
 import {
   awsIcon,
   bukuwarungImages,
+  codeToImpactImages,
+  codeToImpactLink,
   cppIcon,
   devpostLink,
   examImages,
@@ -447,13 +449,36 @@ export const toolsData = (
   </div>
 )
 
-export const thinkathonData = (
+export const codeToImpactData = (
   <div className={styles.container}>
-    <div className={styles.title}>Winning NCS Thinkathon</div>
+    <div className={styles.title}>GIC CodeToImpact Hackathon</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={codeToImpactImages} cols={2} />
+    </div>
     <div className={styles.body}>
       <div className={styles.subsection}>
-        <strong>Under Construction</strong>
-        <img src={underConstruction} alt={'under construction gif'} />
+        <strong>Problem Statement</strong>
+        <div>
+          Develop a web application ,<strong>within 24 hours</strong>,to manage
+          the information complexities in market valuations for private assets.
+          The platform will also need to support the larger volume of private
+          market transactions for analytics and allow our investment strategy
+          teams to scale faster. One possible proposal is to build end-to-end
+          private market valuation capabilities, which will allow for timely
+          investment decision making within a given window of opportunity.
+        </div>
+      </div>
+      <div className={styles.subsection}>
+        <div>
+          <div>
+            <strong>Our Solution</strong>
+          </div>
+          <FontAwesomeIcon
+            icon={faGithubSquare as IconProp}
+            className={styles.brandIcon}
+            onClick={() => openInNewTab(codeToImpactLink)}
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -476,7 +501,7 @@ export const hobbiesData = (
     <div className={styles.title}>My Hobbies</div>
     <div className={styles.body}>
       <div className={styles.subsection}>
-        <strong>Under Construction</strong>
+        <strong></strong>
         <img src={underConstruction} alt={'under construction gif'} />
       </div>
     </div>
