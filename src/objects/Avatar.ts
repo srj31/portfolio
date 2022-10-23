@@ -125,13 +125,13 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
       )
     }
 
-    if (Phaser.Input.Keyboard.JustDown(keyE) && ButtonInteraction.onButton) {
+    if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
+      ButtonInteraction.onButton.pressButton()
+    } else {
       const buttonPressed = ButtonInteraction.buttonPressed
       if (buttonPressed) {
         buttonPressed.unPressButton()
-      } else {
-        ButtonInteraction.onButton.pressButton()
       }
     }
   }
