@@ -839,7 +839,7 @@
                         {
                          "name":"type",
                          "type":"string",
-                         "value":"singtel"
+                         "value":"ncs"
                         }],
                  "rotation":0,
                  "type":"",
@@ -901,24 +901,6 @@
                  "width":32,
                  "x":1588.78,
                  "y":974.923
-                }, 
-                {
-                 "gid":686,
-                 "height":32,
-                 "id":210,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"type",
-                         "type":"string",
-                         "value":"welcome"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":943.323,
-                 "y":640.936
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1954,7 +1936,7 @@
                  "rotation":0,
                  "text":
                     {
-                     "text":"Singtel/NCS",
+                     "text":"NCS",
                      "valign":"center",
                      "wrap":true
                     },
@@ -2133,23 +2115,6 @@
                  "width":137.606,
                  "x":1551.03,
                  "y":858.58
-                }, 
-                {
-                 "height":36.0936,
-                 "id":212,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "text":"Welcome",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":137.606,
-                 "x":908.085,
-                 "y":558.111
                 }],
          "opacity":1,
          "type":"objectgroup",

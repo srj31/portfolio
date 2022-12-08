@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Info />
       <Modal
-        open={open}
+        open={false}
         height={'80vh'}
         width={'50vw'}
         handleClose={() => ButtonInteraction.buttonPressed?.unPressButton()}

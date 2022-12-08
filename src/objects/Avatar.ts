@@ -20,7 +20,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     frame: string | number,
   ) {
     super(scene, x, y, key, frame)
-    this.avatar_state = new ManualState(this)
+    this.avatar_state = new AutoState(this)
     const player = scene.physics.add.sprite(x, y, key)
     player.setScale(0.75)
     this.scene = scene

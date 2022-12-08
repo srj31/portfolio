@@ -11,13 +11,10 @@ export class ButtonInteraction {
   static pressButton = (button: Button) => {
     ButtonInteraction.buttonPressed = button
     ButtonInteraction.handleOpen(true)
-    console.log('movementStopped')
-    console.log('pressed')
   }
 
   static unpressButton = () => {
     ButtonInteraction.buttonPressed = null
     ButtonInteraction.handleOpen(false)
-    console.log('unpressed')
   }
 }
