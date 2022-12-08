@@ -356,12 +356,12 @@
   <object id="166" gid="600" x="1277.26" y="1044.63" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="14" name="button">
-  <object id="30" gid="4970" x="545.126" y="193.251" width="32" height="32">
+  <object id="30" gid="4970" x="545" y="193" width="32" height="32">
    <properties>
     <property name="type" value="uni"/>
    </properties>
   </object>
-  <object id="39" gid="4970" x="192.65" y="353.284" width="32" height="32">
+  <object id="39" gid="4970" x="190" y="350" width="32" height="32">
    <properties>
     <property name="type" value="exam"/>
    </properties>

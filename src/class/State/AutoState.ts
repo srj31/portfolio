@@ -1,6 +1,7 @@
 import { animated } from 'react-spring'
 import { Avatar } from '../../objects/Avatar'
 import { vectorPoints } from './constants'
+import { ManualState } from './ManualState'
 import { State } from './State'
 
 export class AutoState extends State {
@@ -38,6 +39,7 @@ export class AutoState extends State {
         [],
         this.avatar.player,
       )
+      this.avatar.setAvatar_State(new ManualState(this.avatar));
     } else {
       var d = this.t / this.duration
       var cur_pos = new Phaser.Math.Vector2({
