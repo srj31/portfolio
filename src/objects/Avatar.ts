@@ -1,10 +1,14 @@
 // GameObject avatar
 import Phaser from 'phaser'
 import { runInThisContext } from 'vm'
+import { AutoState } from '../class/State/AutoState'
+import { ManualState } from '../class/State/ManualState'
+import { State } from '../class/State/State'
 import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
+  avatar_state: State
   speed = 300
   y_offset = 15
   can_move = true
@@ -16,6 +20,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     frame: string | number,
   ) {
     super(scene, x, y, key, frame)
+    this.avatar_state = new ManualState(this)
     const player = scene.physics.add.sprite(x, y, key)
     player.setScale(0.75)
     this.scene = scene
@@ -70,6 +75,10 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     return this
   }
 
+  setAvatar_State(newState: State) {
+    this.avatar_state = newState
+  }
+
   setCorrectBounds() {
     this.player.body.setSize(
       0.5 * this.player.width,
@@ -92,39 +101,8 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     keyD: Phaser.Input.Keyboard.Key,
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
-    keyE: Phaser.Input.Keyboard.Key,
   ) {
-    this.player.setVelocity(0, 0)
-    if (this.can_move) {
-      if (keyA.isDown) {
-        this.player.setVelocityX(-this.speed)
-        this.player.anims.play('left', true)
-      } else if (keyS.isDown) {
-        this.player.setVelocityY(this.speed)
-        this.player.anims.play('down', true)
-      } else if (keyD.isDown) {
-        this.player.setVelocityX(this.speed)
-        this.player.anims.play('right', true)
-      } else if (keyW.isDown) {
-        this.player.setVelocityY(-this.speed)
-        this.player.anims.play('up', true)
-      } else {
-        this.player.scene.time.delayedCall(
-          0.15 * 1000,
-          () => this.player.anims.play('still', true),
-          [],
-          this.player,
-        )
-      }
-    } else {
-      this.player.scene.time.delayedCall(
-        0.15 * 1000,
-        () => this.player.anims.play('still', true),
-        [],
-        this.player,
-      )
-    }
-
+    this.avatar_state.handleMove(keyA, keyD, keyS, keyW)
     if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
       ButtonInteraction.onButton.pressButton()

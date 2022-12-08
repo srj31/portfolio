@@ -3,15 +3,16 @@ import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
 import { createWorld } from './helper'
 
+var keyA!: Phaser.Input.Keyboard.Key
+var keyS!: Phaser.Input.Keyboard.Key
+var keyD!: Phaser.Input.Keyboard.Key
+var keyW!: Phaser.Input.Keyboard.Key
+
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
   mapHeight = 1270
   mapWidth = 1920
-  private keyE!: Phaser.Input.Keyboard.Key
-  private keyA!: Phaser.Input.Keyboard.Key
-  private keyS!: Phaser.Input.Keyboard.Key
-  private keyD!: Phaser.Input.Keyboard.Key
-  private keyW!: Phaser.Input.Keyboard.Key
+
   constructor() {
     super('MainScene')
   }
@@ -57,11 +58,10 @@ export default class MainScene extends Phaser.Scene {
       'avatar',
       0,
     )
-    this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
-    this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
-    this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
-    this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
-    this.keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E)
+    keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
+    keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+    keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
+    keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
 
     ButtonInteraction.avatar = this.avatar
 
@@ -89,6 +89,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
-    this.avatar.update(this.keyA, this.keyD, this.keyS, this.keyW, this.keyE)
+    this.avatar.update(keyA, keyD, keyS, keyW)
   }
 }
