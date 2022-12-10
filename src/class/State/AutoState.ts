@@ -1,5 +1,6 @@
 import { animated } from 'react-spring'
 import { Avatar } from '../../objects/Avatar'
+import { ButtonInteraction } from '../../objects/Interaction'
 import { vectorPoints } from './constants'
 import { ManualState } from './ManualState'
 import { State } from './State'
@@ -11,6 +12,7 @@ export class AutoState extends State {
   delta_time = 1
   duration = 1700
   t = 0
+  t_enter_pressed_at = 0
   constructor(avatar: Avatar) {
     super(avatar)
     vectorPoints.forEach((point) => {
@@ -23,33 +25,47 @@ export class AutoState extends State {
     keyD: Phaser.Input.Keyboard.Key,
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
+    keyEnter: Phaser.Input.Keyboard.Key,
   ): void {
+    if (ButtonInteraction.onButton) {
+      // can be two things now you either press it or unpress it
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if (buttonPressed) {
+        if (keyEnter.isDown) {
+          buttonPressed.unPressButton()
+          this.avatar.startMovement()
+          this.t_enter_pressed_at = this.t
+        }
+      } else {
+        const delta_threshold = 20.0
+        if (this.t - this.t_enter_pressed_at > delta_threshold) {
+          ButtonInteraction.onButton.pressButton()
+          this.avatar.stopMovement()
+        }
+      }
+    }
 
-    this.t += this.delta_time
+    if (this.avatar.can_move) {
+      this.t += this.delta_time
 
-    if (this.t >= this.duration) {
-      //  Reached the end
-      this.avatar.player.setVelocity(0, 0)
-      this.avatar.player.scene.time.delayedCall(
-        0.15 * 1000,
-        () => this.avatar.player.anims.play('still', true),
-        [],
-        this.avatar.player,
-      )
-      this.avatar.setAvatar_State(new ManualState(this.avatar));
-    } else {
-      var d = this.t / this.duration
-      var cur_pos = new Phaser.Math.Vector2({
-        x: this.avatar.player.x,
-        y: this.avatar.player.y,
-      })
-      var new_pos = this.path.getPoint(d)
-      this.animate(cur_pos, new_pos)
-      this.avatar.player.setPosition(new_pos.x, new_pos.y)
+      if (this.t >= this.duration) {
+        //  Reached the end
+        this.avatar.player.setVelocity(0, 0)
+        this.avatar.stopMovement()
+        this.avatar.setAvatar_State(new ManualState(this.avatar))
+        this.avatar.startMovement()
+      } else {
+        var d = this.t / this.duration
+        var cur_pos = new Phaser.Math.Vector2({
+          x: this.avatar.player.x,
+          y: this.avatar.player.y,
+        })
+        var new_pos = this.path.getPoint(d)
+        this.animate(cur_pos, new_pos)
+        this.avatar.player.setPosition(new_pos.x, new_pos.y)
+      }
     }
   }
-
-
 
   private animate(cur_pos: Phaser.Math.Vector2, new_pos: Phaser.Math.Vector2) {
     // check which direction it is moving;

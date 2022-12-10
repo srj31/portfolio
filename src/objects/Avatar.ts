@@ -90,6 +90,12 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
 
   stopMovement() {
     this.can_move = false
+    this.player.scene.time.delayedCall(
+      0.05 * 1000,
+      () => this.player.anims.play('still', true),
+      [],
+      this.player,
+    )
   }
 
   startMovement() {
@@ -101,16 +107,8 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     keyD: Phaser.Input.Keyboard.Key,
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
+    keyEnter: Phaser.Input.Keyboard.Key
   ) {
-    this.avatar_state.handleMove(keyA, keyD, keyS, keyW)
-    if (ButtonInteraction.onButton) {
-      // can be two things now you either press it or unpress it
-      ButtonInteraction.onButton.pressButton()
-    } else {
-      const buttonPressed = ButtonInteraction.buttonPressed
-      if (buttonPressed) {
-        buttonPressed.unPressButton()
-      }
-    }
+    this.avatar_state.handleMove(keyA, keyD, keyS, keyW, keyEnter)
   }
 }

@@ -1,3 +1,4 @@
+import { ButtonInteraction } from '../../objects/Interaction'
 import { State } from './State'
 
 export class ManualState extends State {
@@ -6,6 +7,7 @@ export class ManualState extends State {
     keyD: Phaser.Input.Keyboard.Key,
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
+    keyEnter: Phaser.Input.Keyboard.Key,
   ): void {
     this.avatar.player.setVelocity(0, 0)
     if (this.avatar.can_move) {
@@ -36,6 +38,15 @@ export class ManualState extends State {
         [],
         this.avatar.player,
       )
+    }
+    if (ButtonInteraction.onButton) {
+      // can be two things now you either press it or unpress it
+      ButtonInteraction.onButton.pressButton()
+    } else {
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if (buttonPressed) {
+        buttonPressed.unPressButton()
+      }
     }
   }
 }
