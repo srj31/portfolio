@@ -67,7 +67,7 @@ export default class Button extends Phaser.Physics.Arcade.Sprite {
   }
 
   onOverlapDialog() {
-    this.setDialogBox('Press E to interact')
+    // this.setDialogBox('Press E to interact')
     ButtonInteraction.onButton = this
   }
 

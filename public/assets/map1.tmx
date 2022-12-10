@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="214">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="221">
  <editorsettings>
   <export target="map1.json" format="json"/>
  </editorsettings>
@@ -327,14 +327,9 @@
     <property name="type" value="tutor"/>
    </properties>
   </object>
-  <object id="54" gid="3730" x="1309.76" y="168.973" width="32" height="32">
+  <object id="54" gid="3730" x="1565.41" y="416.018" width="32" height="32">
    <properties>
     <property name="type" value="masterword"/>
-   </properties>
-  </object>
-  <object id="71" gid="3730" x="1593.33" y="414.594" width="32" height="32">
-   <properties>
-    <property name="type" value="tools"/>
    </properties>
   </object>
   <object id="77" gid="3730" x="1526.73" y="214.477" width="32" height="32">
@@ -364,12 +359,17 @@
   </object>
   <object id="165" gid="2295" x="1328" y="1071.15" width="32" height="32">
    <properties>
-    <property name="type" value="contact"/>
+    <property name="type" value="tools"/>
    </properties>
   </object>
   <object id="174" gid="2295" x="1588.78" y="974.923" width="32" height="32">
    <properties>
     <property name="type" value="hobbies"/>
+   </properties>
+  </object>
+  <object id="214" gid="3730" x="1310.27" y="161.425" width="32" height="32">
+   <properties>
+    <property name="type" value="contact"/>
    </properties>
   </object>
  </objectgroup>
@@ -423,11 +423,8 @@
   <object id="38" gid="5063" x="173.405" y="293.525" width="32" height="32"/>
   <object id="42" gid="5058" x="335.464" y="166.917" width="32" height="32"/>
   <object id="43" gid="5026" x="335.489" y="134.505" width="32" height="32"/>
-  <object id="50" gid="3356" x="1297.91" y="80.5401" width="32" height="32"/>
-  <object id="51" gid="3357" x="1329.81" y="79.7982" width="32" height="32"/>
-  <object id="68" gid="2471" x="1582.89" y="380.148" width="32" height="32"/>
-  <object id="69" gid="2473" x="1616.3" y="382.235" width="32" height="32"/>
-  <object id="70" gid="2472" x="1597.51" y="355.095" width="32" height="32"/>
+  <object id="50" gid="3356" x="1553.56" y="327.585" width="32" height="32"/>
+  <object id="51" gid="3357" x="1585.46" y="326.843" width="32" height="32"/>
   <object id="74" gid="2645" x="1519.33" y="157.692" width="32" height="32"/>
   <object id="75" gid="2645" x="1539.41" y="150.765" width="32" height="32"/>
   <object id="76" gid="2712" x="1506.11" y="187.287" width="32" height="32"/>
@@ -453,10 +450,10 @@
   <object id="35" gid="5095" x="173.405" y="325.936" width="32" height="32"/>
   <object id="36" gid="5096" x="204.83" y="325.923" width="32" height="32"/>
   <object id="41" gid="5090" x="335.464" y="197.303" width="32" height="32"/>
-  <object id="46" gid="3420" x="1298.67" y="143.684" width="32" height="32"/>
-  <object id="47" gid="3421" x="1329.88" y="143.742" width="32" height="32"/>
-  <object id="52" gid="3389" x="1329.33" y="111.697" width="32" height="32"/>
-  <object id="53" gid="3388" x="1297.8" y="112.068" width="32" height="32"/>
+  <object id="46" gid="3420" x="1554.32" y="390.729" width="32" height="32"/>
+  <object id="47" gid="3421" x="1585.53" y="390.787" width="32" height="32"/>
+  <object id="52" gid="3389" x="1584.98" y="358.742" width="32" height="32"/>
+  <object id="53" gid="3388" x="1553.45" y="359.113" width="32" height="32"/>
   <object id="72" gid="2677" x="1518.86" y="189.391" width="32" height="32"/>
   <object id="73" gid="2677" x="1538.69" y="182.085" width="32" height="32"/>
   <object id="82" gid="2599" x="244.82" y="805.082" width="32" height="32"/>
@@ -493,6 +490,10 @@
   <object id="171" gid="1557" x="1586.5" y="926.266" width="32" height="32"/>
   <object id="172" gid="1520" x="1595.72" y="948.197" width="32" height="32"/>
   <object id="173" gid="1591" x="1624.13" y="932.498" width="32" height="32"/>
+  <object id="215" gid="2472" x="1311.87" y="126.79" width="32" height="32"/>
+  <object id="216" gid="2471" x="1280.56" y="127.593" width="32" height="32"/>
+  <object id="217" gid="2473" x="1311.07" y="97.0854" width="32" height="32"/>
+  <object id="219" gid="2440" x="1345.59" y="128.396" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="20" name="text">
   <object id="189" x="496.55" y="30.8034" width="131.838" height="29.5713"/>
@@ -519,11 +520,8 @@
   <object id="198" x="1489.82" y="1181.27" width="137.606" height="36.0936">
    <text wrap="1" valign="center">Upcoming Projects</text>
   </object>
-  <object id="199" x="1260.67" y="18.9172" width="137.606" height="36.0936">
+  <object id="199" x="1516.32" y="265.962" width="137.606" height="36.0936">
    <text wrap="1" valign="center">MasterWord</text>
-  </object>
-  <object id="200" x="1570.19" y="288.473" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Tools</text>
   </object>
   <object id="201" x="1473.65" y="96.7846" width="137.606" height="36.0936">
    <text wrap="1" valign="center">GIC CodeToImpact</text>
@@ -541,10 +539,13 @@
    <text wrap="1" valign="center">About Me</text>
   </object>
   <object id="207" x="1307.9" y="951.556" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Contact</text>
+   <text wrap="1" valign="center">Tools</text>
   </object>
   <object id="208" x="1551.03" y="858.58" width="137.606" height="36.0936">
    <text wrap="1" valign="center">Hobbies</text>
+  </object>
+  <object id="220" x="1253.45" y="26.1086" width="137.606" height="36.0936">
+   <text wrap="1" valign="center">Contact Me</text>
   </object>
  </objectgroup>
 </map>
