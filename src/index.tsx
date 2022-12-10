@@ -5,6 +5,8 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 import './PhaserGame'
+import './fonts/Press2P/PressStart2P-Regular.ttf'
+import './fonts/VT323/VT323-Regular.ttf'
 
 ReactDOM.render(
   <React.StrictMode>

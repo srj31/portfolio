@@ -43,6 +43,8 @@ export class AutoState extends State {
           this.avatar.stopMovement()
         }
       }
+    } else {
+      this.avatar.startMovement()
     }
 
     if (this.avatar.can_move) {

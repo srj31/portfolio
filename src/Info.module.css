@@ -1,6 +1,6 @@
 .title {
-    font-size: 3rem;
-    font-weight: 400;
+    font-family: "Press2P";
+    font-size: 2.5rem;
     margin-bottom: 2vh;
 }
 
@@ -15,6 +15,12 @@
     align-items: flex-start;
 }
 
+.section {
+    width: 100%;
+    font-family: "VT323";
+    font-size: 1.5rem;
+}
+
 .subsection {
     margin-bottom: 4vh;
     display: flex;
@@ -23,7 +29,7 @@
 }
 
 strong {
-    font-size: 1.3rem;
+    font-size: 2rem;
     text-shadow: 1px 1px silver;
     padding-right: 0.5rem;
 }

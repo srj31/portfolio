@@ -48,14 +48,16 @@ export const welcomeData = (
     </div>
     <div className={styles.body}>
       <div className={styles.section}>
-        <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>Hello! I'm Sourabh 👋</div>
+        <div style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+          Hello! I'm Sourabh 👋
+        </div>
         <div
           style={{
             fontFamily: "'Roboto Mono', monospace",
             fontWeight: '100',
             fontSize: '2rem',
             color: ' rgb(10, 8, 8)',
-            paddingBottom: "2rem"
+            paddingBottom: '1rem',
           }}
         >
           <TypyingAnimation
@@ -138,16 +140,18 @@ export const tutorData = (
   <div className={styles.container}>
     <div className={styles.title}>Tutor/TA</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>CS2040/CS2040S: </strong>Algorithms and Data Structure under Dr.
-        Chong Ket Fah. As a Teaching Assistant, I was responsible for holding
-        Lab Sessions and summarise and clarify student doubts
-      </div>
-      <div className={styles.subsection}>
-        <strong>International Linguistic Olympiad: </strong> Mentor and Problem
-        Setter for the Indian National Team Selection. It involved creating and
-        vetting problems for the examination as well as mentoring the team for
-        the International Linguistic Olympiad
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>CS2040/CS2040S: </strong>Algorithms and Data Structure under
+          Dr. Chong Ket Fah. As a Teaching Assistant, I was responsible for
+          holding Lab Sessions and summarise and clarify student doubts
+        </div>
+        <div className={styles.subsection}>
+          <strong>International Linguistic Olympiad: </strong> Mentor and
+          Problem Setter for the Indian National Team Selection. It involved
+          creating and vetting problems for the examination as well as mentoring
+          the team for the International Linguistic Olympiad
+        </div>
       </div>
     </div>
   </div>
@@ -160,25 +164,27 @@ export const examData = (
       <WovenImageList imgList={examImages} cols={1} />
     </div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>International Linguistics Olympiad: </strong> Reprsented India
-        at the IOL 2019 Yongin. The selection process required two rounds and a
-        camp for the team selection at the National level. The top 8 students
-        were chosen from high school students all over the nation. I was
-        fortunate to get a silver medal, a best solution and a bronze medal for
-        the team competition during the Team Selection Round.
-      </div>
-      <div className={styles.subsection}>
-        <strong>KVPY: </strong> The Kishore Vaigyanik Protsahan Yojana (KVPY) is
-        an on-going National Program of Fellowship in Basic Sciences, initiated
-        and funded by the Department of Science and Technology, Government of
-        India. I received this scholarship at 11th Grade after two rounds of
-        written test and interview.
-      </div>
-      <div className={styles.subsection}>
-        <strong>NUS Hack&Roll: </strong> Hack&Roll is NUS Hackers' annual
-        24-hour hackathon, and the largest student-run hackathon in Singapore.
-        My team won the Top8 prize in Singapore
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>International Linguistics Olympiad: </strong> Reprsented India
+          at the IOL 2019 Yongin. The selection process required two rounds and
+          a camp for the team selection at the National level. The top 8
+          students were chosen from high school students all over the nation. I
+          was fortunate to get a silver medal, a best solution and a bronze
+          medal for the team competition during the Team Selection Round.
+        </div>
+        <div className={styles.subsection}>
+          <strong>KVPY: </strong> The Kishore Vaigyanik Protsahan Yojana (KVPY)
+          is an on-going National Program of Fellowship in Basic Sciences,
+          initiated and funded by the Department of Science and Technology,
+          Government of India. I received this scholarship at 11th Grade after
+          two rounds of written test and interview.
+        </div>
+        <div className={styles.subsection}>
+          <strong>NUS Hack&Roll: </strong> Hack&Roll is NUS Hackers' annual
+          24-hour hackathon, and the largest student-run hackathon in Singapore.
+          My team won the Top8 prize in Singapore
+        </div>
       </div>
     </div>
   </div>
@@ -191,33 +197,36 @@ export const bukuwarungData = (
       <WovenImageList imgList={bukuwarungImages} cols={1} />
     </div>
     <div className={styles.body}>
-      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
-        <div>
-          <strong>Internship Period: </strong> May 2021 to August 2021
+      <div className={styles.section}>
+        <div className={styles.subsection} style={{ flexDirection: 'column' }}>
+          <div>
+            <strong>Internship Period: </strong> May 2021 to August 2021
+          </div>
+          <div>
+            <strong>Role: </strong> Frontend Web Developer Intern
+          </div>
+          <div>
+            <strong>Tech stack: </strong> NextJS, Spring, HTML, CSS
+          </div>
         </div>
-        <div>
-          <strong>Role: </strong> Frontend Web Developer Intern
+        <div className={styles.subsection}>
+          <h1>Responsibilites:</h1>
+          <ul>
+            <li>
+              Developed and built features for the e-Commerce platform
+              (tokoko.id)
+            </li>
+            <li>
+              Achieved fluency in NextJS and Context API in order to
+              successfully migrate from Spring and used RESTful APIs to retrieve
+              data from the backend implemented in Spring
+            </li>
+            <li>
+              Collaborated with product managers, testers and developers in a
+              SCRUM environment
+            </li>
+          </ul>
         </div>
-        <div>
-          <strong>Tech stack: </strong> NextJS, Spring, HTML, CSS
-        </div>
-      </div>
-      <div className={styles.subsection}>
-        <h1>Responsibilites:</h1>
-        <ul>
-          <li>
-            Developed and built features for the e-Commerce platform (tokoko.id)
-          </li>
-          <li>
-            Achieved fluency in NextJS and Context API in order to successfully
-            migrate from Spring and used RESTful APIs to retrieve data from the
-            backend implemented in Spring
-          </li>
-          <li>
-            Collaborated with product managers, testers and developers in a
-            SCRUM environment
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -230,30 +239,32 @@ export const zendodoData = (
       <WovenImageList imgList={zendodoImages} cols={1} />
     </div>
     <div className={styles.body}>
-      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
-        <div>
-          <strong>Internship Period: </strong> December 2021 to May 2022
+      <div className={styles.section}>
+        <div className={styles.subsection} style={{ flexDirection: 'column' }}>
+          <div>
+            <strong>Internship Period: </strong> December 2021 to May 2022
+          </div>
+          <div>
+            <strong>Role: </strong> Web Developer Intern
+          </div>
+          <div>
+            <strong>Tech stack: </strong> NextJS, WAX Blockchain API, Typescript
+          </div>
         </div>
-        <div>
-          <strong>Role: </strong> Web Developer Intern
+        <div className={styles.subsection}>
+          <h1>Responsibilites:</h1>
+          <ul>
+            <li>
+              Developed the gamification aspect for the NFTs owned by the users
+              on the platform, allowing users to earn an active income
+            </li>
+            <li>
+              Worked with NextJS, React, Typescript, Sass and Zustand and used
+              WAX Blockchain RPC API for fetching data and making transactions
+              on the WAX blockchain
+            </li>
+          </ul>
         </div>
-        <div>
-          <strong>Tech stack: </strong> NextJS, WAX Blockchain API, Typescript
-        </div>
-      </div>
-      <div className={styles.subsection}>
-        <h1>Responsibilites:</h1>
-        <ul>
-          <li>
-            Developed the gamification aspect for the NFTs owned by the users on
-            the platform, allowing users to earn an active income
-          </li>
-          <li>
-            Worked with NextJS, React, Typescript, Sass and Zustand and used WAX
-            Blockchain RPC API for fetching data and making transactions on the
-            WAX blockchain
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -266,31 +277,33 @@ export const ncsData = (
       <WovenImageList imgList={ncsImages} cols={1} />
     </div>
     <div className={styles.body}>
-      <div className={styles.subsection} style={{ flexDirection: 'column' }}>
-        <div>
-          <strong>Internship Period: </strong> May 2022 to August 2022
+      <div className={styles.section}>
+        <div className={styles.subsection} style={{ flexDirection: 'column' }}>
+          <div>
+            <strong>Internship Period: </strong> May 2022 to August 2022
+          </div>
+          <div>
+            <strong>Role: </strong> Software Development Intern
+          </div>
+          <div>
+            <strong>Tech stack: </strong> NextJs, TigerGraph, AWS, Spark, VMs,
+          </div>
         </div>
-        <div>
-          <strong>Role: </strong> Software Development Intern
+        <div className={styles.subsection}>
+          <h1>Responsibilites:</h1>
+          <ul>
+            <li>
+              Developed a custom Dashboard using NextJs and TigerGraph on the
+              backend for the scam detection project, which will be demoed at
+              the NCS Innovation HUB.
+            </li>
+            <li>
+              Currently working on training on Red Team/ Cybersecurity and
+              setting up the virtual security lab for malware attacks and
+              analysis. To be presented at the OT-IASC Summit
+            </li>
+          </ul>
         </div>
-        <div>
-          <strong>Tech stack: </strong> NextJs, TigerGraph, AWS, Spark, VMs,
-        </div>
-      </div>
-      <div className={styles.subsection}>
-        <h1>Responsibilites:</h1>
-        <ul>
-          <li>
-            Developed a custom Dashboard using NextJs and TigerGraph on the
-            backend for the scam detection project, which will be demoed at the
-            NCS Innovation HUB.
-          </li>
-          <li>
-            Currently working on training on Red Team/ Cybersecurity and setting
-            up the virtual security lab for malware attacks and analysis. To be
-            presented at the OT-IASC Summit
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -300,36 +313,38 @@ export const contactData = (
   <div className={styles.container}>
     <div className={styles.title}>Contact Me here</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <div>
+      <div className={styles.section}>
+        <div className={styles.subsection} style={{ display: 'flex' }}>
           <div>
-            <strong>GitHub</strong>
+            <div>
+              <strong>GitHub</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faGithubSquare as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(githubLink)}
+            />
           </div>
-          <FontAwesomeIcon
-            icon={faGithubSquare as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(githubLink)}
-          />
-        </div>
-        <div>
           <div>
-            <strong>LinkedIn</strong>
+            <div>
+              <strong>LinkedIn</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faLinkedin as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(linkedInLink)}
+            />
           </div>
-          <FontAwesomeIcon
-            icon={faLinkedin as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(linkedInLink)}
-          />
-        </div>
-        <div>
           <div>
-            <strong>Instagram</strong>
+            <div>
+              <strong>Instagram</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faInstagramSquare as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(instaLink)}
+            />
           </div>
-          <FontAwesomeIcon
-            icon={faInstagramSquare as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(instaLink)}
-          />
         </div>
       </div>
     </div>
@@ -340,56 +355,58 @@ export const masterwordData = (
   <div className={styles.container}>
     <div className={styles.title}>Masterword at NUS HackNRoll2022</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>The Game</strong>
-        <ul>
-          <li>
-            Master Word is a word game similar to the popular game Wordle, that
-            allows you to test your puzzle skills while teasing you by giving
-            you the information about how close you are to the answer. A word is
-            picked at random by the computer from the English dictionary which
-            the player is supposed to guess. The guess can only be a valid
-            English word. The player gets a fixed number of tries for every
-            word, and after each guess, the player is told how many alphabets in
-            their guess overlap the ones in the given word, and moreover, how
-            many of them are in the right position, thus acting as hints and
-            enabling the player to solve the puzzle. Further you can change the
-            difficulty based on word length you choose. The game was developed
-            for the 24 hour NUS HacknRoll 2022 Hackathon, which was awarded the
-            top 8 project
-          </li>
-        </ul>
-      </div>
-      <div className={styles.subsection}>
-        <div>
-          <div>
-            <strong>GitHub Repo</strong>
-          </div>
-          <FontAwesomeIcon
-            icon={faGithubSquare as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(masterWordGitLink)}
-          />
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>The Game</strong>
+          <ul>
+            <li>
+              Master Word is a word game similar to the popular game Wordle,
+              that allows you to test your puzzle skills while teasing you by
+              giving you the information about how close you are to the answer.
+              A word is picked at random by the computer from the English
+              dictionary which the player is supposed to guess. The guess can
+              only be a valid English word. The player gets a fixed number of
+              tries for every word, and after each guess, the player is told how
+              many alphabets in their guess overlap the ones in the given word,
+              and moreover, how many of them are in the right position, thus
+              acting as hints and enabling the player to solve the puzzle.
+              Further you can change the difficulty based on word length you
+              choose. The game was developed for the 24 hour NUS HacknRoll 2022
+              Hackathon, which was awarded the top 8 project
+            </li>
+          </ul>
         </div>
-        <div>
+        <div className={styles.subsection}>
           <div>
-            <strong>DevPost Link</strong>
+            <div>
+              <strong>GitHub Repo</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faGithubSquare as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(masterWordGitLink)}
+            />
           </div>
-          <FontAwesomeIcon
-            icon={faD as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(devpostLink)}
-          />
-        </div>
-        <div>
           <div>
-            <strong>Game Link</strong>
+            <div>
+              <strong>DevPost Link</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faD as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(devpostLink)}
+            />
           </div>
-          <FontAwesomeIcon
-            icon={faSquareArrowUpRight as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(masterWordLink)}
-          />
+          <div>
+            <div>
+              <strong>Game Link</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faSquareArrowUpRight as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(masterWordLink)}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -400,61 +417,63 @@ export const toolsData = (
   <div className={styles.container}>
     <div className={styles.title}>Tools</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>I am good at: </strong>
-        <div className={styles.icons}>
-          <div className={styles.icon}>
-            <img src={javaIcon} alt={'java icon'} />
-            <div>Java</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={typescriptIcon} alt={'typescript icon'} />
-            <div>Typescript</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={reactIcon} alt={'react icon'} />
-            <div>React</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={cppIcon} alt={'C++ icon'} />
-            <div>C++</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={gitIcon} alt={'GitHub Icon'} />
-            <div>Git</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={sassIcon} alt={'Sass Icon'} />
-            <div>Sass</div>
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>I am good at: </strong>
+          <div className={styles.icons}>
+            <div className={styles.icon}>
+              <img src={javaIcon} alt={'java icon'} />
+              <div>Java</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={typescriptIcon} alt={'typescript icon'} />
+              <div>Typescript</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={reactIcon} alt={'react icon'} />
+              <div>React</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={cppIcon} alt={'C++ icon'} />
+              <div>C++</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={gitIcon} alt={'GitHub Icon'} />
+              <div>Git</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={sassIcon} alt={'Sass Icon'} />
+              <div>Sass</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.subsection}>
-        <strong>I have tried:</strong>
-        <div className={styles.icons}>
-          <div className={styles.icon}>
-            <img src={mysqlIcon} alt={'MySql Icon'} />
-            <div>MySql</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={nodeIcon} alt={'NodeJs Icon'} />
-            <div>NodeJs</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={tigergraphIcon} alt={'TigerGraph Icon'} />
-            <div>TigerGraph</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={awsIcon} alt={'AWS Icon'} />
-            <div>AWS</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={mongoIcon} alt={'MongoDB Icon'} />
-            <div>MongoDB</div>
-          </div>
-          <div className={styles.icon}>
-            <img src={pythonIcon} alt={'Python Icon'} />
-            <div>Python</div>
+        <div className={styles.subsection}>
+          <strong>I have tried:</strong>
+          <div className={styles.icons}>
+            <div className={styles.icon}>
+              <img src={mysqlIcon} alt={'MySql Icon'} />
+              <div>MySql</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={nodeIcon} alt={'NodeJs Icon'} />
+              <div>NodeJs</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={tigergraphIcon} alt={'TigerGraph Icon'} />
+              <div>TigerGraph</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={awsIcon} alt={'AWS Icon'} />
+              <div>AWS</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={mongoIcon} alt={'MongoDB Icon'} />
+              <div>MongoDB</div>
+            </div>
+            <div className={styles.icon}>
+              <img src={pythonIcon} alt={'Python Icon'} />
+              <div>Python</div>
+            </div>
           </div>
         </div>
       </div>
@@ -469,28 +488,31 @@ export const codeToImpactData = (
       <WovenImageList imgList={codeToImpactImages} cols={2} />
     </div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>Problem Statement</strong>
-        <div>
-          Develop a web application ,<strong>within 24 hours</strong>,to manage
-          the information complexities in market valuations for private assets.
-          The platform will also need to support the larger volume of private
-          market transactions for analytics and allow our investment strategy
-          teams to scale faster. One possible proposal is to build end-to-end
-          private market valuation capabilities, which will allow for timely
-          investment decision making within a given window of opportunity.
-        </div>
-      </div>
-      <div className={styles.subsection}>
-        <div>
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>Problem Statement</strong>
           <div>
-            <strong>Our Solution</strong>
+            Develop a web application ,<strong>within 24 hours</strong>,to
+            manage the information complexities in market valuations for private
+            assets. The platform will also need to support the larger volume of
+            private market transactions for analytics and allow our investment
+            strategy teams to scale faster. One possible proposal is to build
+            end-to-end private market valuation capabilities, which will allow
+            for timely investment decision making within a given window of
+            opportunity.
           </div>
-          <FontAwesomeIcon
-            icon={faGithubSquare as IconProp}
-            className={styles.brandIcon}
-            onClick={() => openInNewTab(codeToImpactLink)}
-          />
+        </div>
+        <div className={styles.subsection}>
+          <div>
+            <div>
+              <strong>Our Solution</strong>
+            </div>
+            <FontAwesomeIcon
+              icon={faGithubSquare as IconProp}
+              className={styles.brandIcon}
+              onClick={() => openInNewTab(codeToImpactLink)}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -501,9 +523,11 @@ export const travelData = (
   <div className={styles.container}>
     <div className={styles.title}>Future Plans/ Projects</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong>Under Construction</strong>
-        <img src={underConstruction} alt={'under construction gif'} />
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong>Under Construction</strong>
+          <img src={underConstruction} alt={'under construction gif'} />
+        </div>
       </div>
     </div>
   </div>
@@ -513,9 +537,11 @@ export const hobbiesData = (
   <div className={styles.container}>
     <div className={styles.title}>My Hobbies</div>
     <div className={styles.body}>
-      <div className={styles.subsection}>
-        <strong></strong>
-        <img src={underConstruction} alt={'under construction gif'} />
+      <div className={styles.section}>
+        <div className={styles.subsection}>
+          <strong></strong>
+          <img src={underConstruction} alt={'under construction gif'} />
+        </div>
       </div>
     </div>
   </div>
