@@ -8,8 +8,8 @@ export class AutoState extends State {
   points = vectorPoints
   curPoint = 0
   path = new Phaser.Curves.Path(vectorPoints[0].x, vectorPoints[0].y)
-  delta_time = 2
-  duration = 200
+  delta_time = 1
+  duration = 1700
   t = 0
   constructor(avatar: Avatar) {
     super(avatar)
@@ -24,10 +24,7 @@ export class AutoState extends State {
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
   ): void {
-    // graphics.fillStyle(0xff0000, 1);
-    // graphics.fillCircle(line.x1, line.y1, 8);
-    // graphics.fillStyle(0xff00ff, 1);
-    // graphics.fillCircle(line.x2, line.y2, 8);
+
     this.t += this.delta_time
 
     if (this.t >= this.duration) {
@@ -52,9 +49,10 @@ export class AutoState extends State {
     }
   }
 
+
+
   private animate(cur_pos: Phaser.Math.Vector2, new_pos: Phaser.Math.Vector2) {
     // check which direction it is moving;
-    console.log(cur_pos, new_pos)
     if (cur_pos.x < new_pos.x) {
       this.avatar.player.anims.play('right', true)
     } else if (cur_pos.x > new_pos.x) {
