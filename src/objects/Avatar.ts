@@ -1,10 +1,7 @@
 // GameObject avatar
 import Phaser from 'phaser'
-import { runInThisContext } from 'vm'
-import { AutoState } from '../class/State/AutoState'
-import { ManualState } from '../class/State/ManualState'
+import { StartState } from '../class/State/StartState'
 import { State } from '../class/State/State'
-import { ButtonInteraction } from './Interaction'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
@@ -20,9 +17,9 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     frame: string | number,
   ) {
     super(scene, x, y, key, frame)
-    this.avatar_state = new AutoState(this)
+    this.avatar_state = new StartState(this)
     const player = scene.physics.add.sprite(x, y, key)
-    player.setScale(0.75)
+    player.setScale(0.8)
     this.scene = scene
     this.setPosition(x, y)
     this.setTexture(key)
