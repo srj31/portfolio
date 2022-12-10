@@ -38,6 +38,7 @@ import {
   welcomeImages,
   zendodoImages,
 } from './constants'
+import TypyingAnimation from '../component/common/TypingAnimated/TypingAnimation'
 
 export const welcomeData = (
   <div className={styles.container}>
@@ -47,19 +48,31 @@ export const welcomeData = (
     </div>
     <div className={styles.body}>
       <div className={styles.section}>
-        <strong>Hello! I'm Sourabh and I love building stuff</strong>
-        <div style={{ paddingBottom: '1rem', fontWeight: 500 }}>
-          Preferably Software but have worked on Cybersecurity as well :)
+        <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>Hello! I'm Sourabh 👋</div>
+        <div
+          style={{
+            fontFamily: "'Roboto Mono', monospace",
+            fontWeight: '100',
+            fontSize: '2rem',
+            color: ' rgb(10, 8, 8)',
+            paddingBottom: "2rem"
+          }}
+        >
+          <TypyingAnimation
+            strings={['I Love Coding', 'Solving Puzzles', 'and my Guitars']}
+          />
         </div>
-        <div style={{ paddingBottom: '1rem' }}>
-          {' '}
-          To know more about me, my skills and experiences, press{' '}
-          <strong>Enter key</strong> to automatically go through my story after
-          which you can walk around with <strong>WASD keys</strong> and walk
-          upto the buttons (similar to the image)
-        </div>
-        <div>
-          <strong>Thank you</strong> for checking this out
+        <div style={{ fontSize: '1.5rem' }}>
+          <div style={{ paddingBottom: '1rem' }}>
+            {' '}
+            To know more about me, my skills and experiences, press{' '}
+            <strong>Enter key</strong> to automatically go through my story
+            after which you can walk around with <strong>WASD keys</strong> and
+            walk upto the buttons (similar to the image)
+          </div>
+          <div>
+            <strong>Thank you</strong> for checking this out
+          </div>
         </div>
       </div>
     </div>
