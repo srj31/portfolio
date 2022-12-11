@@ -1,4 +1,3 @@
-import { animated } from 'react-spring'
 import { Avatar } from '../../objects/Avatar'
 import { ButtonInteraction } from '../../objects/Interaction'
 import { InteractionKeys } from '../../types/keys'
