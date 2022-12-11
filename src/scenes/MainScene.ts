@@ -1,6 +1,9 @@
+import { AddShoppingCartSharp } from '@mui/icons-material'
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
+import { Npc } from '../objects/Npc'
+import { npcLocations } from './constants'
 import { createWorld } from './helper'
 
 var keyA!: Phaser.Input.Keyboard.Key
@@ -12,6 +15,7 @@ var keyE!: Phaser.Input.Keyboard.Key
 
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
+  npcs!: Npc[]
   mapHeight = 1270
   mapWidth = 1920
 
@@ -23,6 +27,14 @@ export default class MainScene extends Phaser.Scene {
     this.load.spritesheet('avatar', 'assets/sprite/avatar1.png', {
       frameWidth: 64,
       frameHeight: 64,
+    })
+    const npc_sprites = [1, 2, 3, 4]
+
+    npc_sprites.forEach((num) => {
+      this.load.spritesheet(`npc${num}`, `assets/sprite/npc${num}.png`, {
+        frameWidth: 64,
+        frameHeight: 64,
+      })
     })
     this.load.tilemapTiledJSON('map', 'assets/map1.json')
 
@@ -60,6 +72,8 @@ export default class MainScene extends Phaser.Scene {
       'avatar',
       0,
     )
+    this.npcs = []
+
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
@@ -72,6 +86,12 @@ export default class MainScene extends Phaser.Scene {
     this.avatar.player.depth = 1
     this.physics.add.existing(this.avatar.player)
 
+    npcLocations.forEach((pos, i) => {
+      this.addNpcAtPos(pos, i+1)
+    })
+
+    const npc_players = this.npcs.map((npc) => npc.player)
+
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
     const tileset1 = map.addTilesetImage('terrain_atlas', 'terrain_atlas')
     const tileset2 = map.addTilesetImage('build_atlas', 'build_atlas')
@@ -81,7 +101,13 @@ export default class MainScene extends Phaser.Scene {
 
     const tilesets = [tileset1, tileset2, tileset3, tileset4, tileset5]
 
-    const worldLayers = createWorld(this, this.avatar.player, map, tilesets)
+    const worldLayers = createWorld(
+      this,
+      this.avatar.player,
+      npc_players,
+      map,
+      tilesets,
+    )
 
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)
@@ -90,6 +116,13 @@ export default class MainScene extends Phaser.Scene {
     this.cameras.main.startFollow(this.avatar.player, false, 0.5, 0.5)
     this.cameras.main.centerOn(this.mapWidth / 2, this.mapHeight / 2)
     this.cameras.main.roundPixels = true
+  }
+
+  addNpcAtPos(pos: { x: number; y: number }, sprite_num: number) {
+    const npc = new Npc(this, pos.x, pos.y, `npc${sprite_num}`, 0)
+    this.npcs.push(npc)
+    npc.player.depth = 1
+    this.physics.add.existing(npc.player)
   }
 
   update() {

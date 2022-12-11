@@ -6,6 +6,7 @@ import { ReactElement } from 'react'
 export const createWorld = (
   scene: Phaser.Scene,
   sprite: Phaser.Physics.Arcade.Sprite,
+  npc_sprites: Phaser.Physics.Arcade.Sprite[],
   map: Phaser.Tilemaps.Tilemap,
   tilesets: Phaser.Tilemaps.Tileset[],
 ): WorldLayer => {
@@ -35,6 +36,8 @@ export const createWorld = (
   addGroupFromTiled(scene, map, sprite, 'statue', tilesets, false, 100)
 
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
+
+  scene.physics.add.collider(sprite, npc_sprites, undefined, undefined, this)
 
   const textObject = map.getObjectLayer('text')
   textObject.objects.forEach((textObject) => {
