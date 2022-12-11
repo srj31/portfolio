@@ -38,7 +38,11 @@ export class AutoState extends State {
         }
       }
     } else {
-      this.avatar.startMovement()
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if(buttonPressed) {
+        buttonPressed.unPressButton()
+        this.avatar.startMovement()
+      }
     }
 
     if (this.avatar.can_move) {
