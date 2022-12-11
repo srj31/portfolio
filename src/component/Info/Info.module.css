@@ -1,24 +1,32 @@
 .container {
     position: absolute;
-    background: rgb(0, 0, 0, 0.2);
+    background: rgb(200, 200, 200, 0.4);
     top: 10vh;
     padding: 1vw;
-    color: blanchedalmond;
+    color: black;
     font-weight: 500;
-    width: 10vw;
+    width: 12vw;
+    font-family: "VT323";
+    border: 1px solid black;
 }
 
 .title {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 2rem;
     padding-bottom: 2vh;
 }
 
 .body {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.section {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 300;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .iconImages {
