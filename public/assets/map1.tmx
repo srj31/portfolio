@@ -502,50 +502,50 @@
   </object>
   <object id="191" x="296.328" y="85.6334" width="131.838" height="29.5713"/>
   <object id="192" x="299.605" y="90.3006" width="125.285" height="20.0759">
-   <text wrap="1" valign="center">As A Tutor</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">As A Tutor</text>
   </object>
   <object id="193" x="131.203" y="218.375" width="145.391" height="48.0533"/>
   <object id="194" x="127.48" y="218.506" width="137.606" height="36.0936">
    <text wrap="1" valign="center">Scholarships &amp; Olympiad</text>
   </object>
   <object id="195" x="243.657" y="671.791" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Bukuwarung</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Bukuwarung</text>
   </object>
   <object id="196" x="70.783" y="900.645" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Zendodo</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Zendodo</text>
   </object>
   <object id="197" x="393.336" y="976.947" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Singtel</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Singtel</text>
   </object>
   <object id="198" x="1489.82" y="1181.27" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Upcoming Projects</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Upcoming Projects</text>
   </object>
   <object id="199" x="1516.32" y="265.962" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">MasterWord</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">MasterWord</text>
   </object>
   <object id="201" x="1473.65" y="96.7846" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">GIC CodeToImpact</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">GIC CodeToImpact</text>
   </object>
   <object id="202" x="819.566" y="448.932" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Education</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Education</text>
   </object>
   <object id="204" x="998.225" y="448.932" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Misc</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Misc</text>
   </object>
   <object id="205" x="813.405" y="670.716" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Work Experience</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Work Experience</text>
   </object>
   <object id="206" x="983.439" y="673.18" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">About Me</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">About Me</text>
   </object>
   <object id="207" x="1307.9" y="951.556" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Tools</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Tools</text>
   </object>
   <object id="208" x="1551.03" y="858.58" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Hobbies</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Hobbies</text>
   </object>
   <object id="220" x="1253.45" y="26.1086" width="137.606" height="36.0936">
-   <text wrap="1" valign="center">Contact Me</text>
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Contact Me</text>
   </object>
  </objectgroup>
 </map>

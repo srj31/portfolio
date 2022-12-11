@@ -704,8 +704,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1565.4093256262,
-                 "y":416.017958253051
+                 "x":1565.41,
+                 "y":416.018
                 }, 
                 {
                  "gid":3730,
@@ -848,8 +848,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1310.26846499679,
-                 "y":161.424534360951
+                 "x":1310.27,
+                 "y":161.425
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -982,8 +982,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1553.5593256262,
-                 "y":327.585058253051
+                 "x":1553.56,
+                 "y":327.585
                 }, 
                 {
                  "gid":3357,
@@ -994,8 +994,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1585.4593256262,
-                 "y":326.843158253051
+                 "x":1585.46,
+                 "y":326.843
                 }, 
                 {
                  "gid":2645,
@@ -1293,8 +1293,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1554.3193256262,
-                 "y":390.728958253051
+                 "x":1554.32,
+                 "y":390.729
                 }, 
                 {
                  "gid":3421,
@@ -1305,8 +1305,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1585.5293256262,
-                 "y":390.786958253051
+                 "x":1585.53,
+                 "y":390.787
                 }, 
                 {
                  "gid":3389,
@@ -1317,8 +1317,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1584.9793256262,
-                 "y":358.741958253051
+                 "x":1584.98,
+                 "y":358.742
                 }, 
                 {
                  "gid":3388,
@@ -1329,8 +1329,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1553.4493256262,
-                 "y":359.112958253051
+                 "x":1553.45,
+                 "y":359.113
                 }, 
                 {
                  "gid":2677,
@@ -1773,8 +1773,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1311.87411689146,
-                 "y":126.789980732177
+                 "x":1311.87,
+                 "y":126.79
                 }, 
                 {
                  "gid":2471,
@@ -1785,8 +1785,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1280.56390494541,
-                 "y":127.592806679512
+                 "x":1280.56,
+                 "y":127.593
                 }, 
                 {
                  "gid":2473,
@@ -1797,8 +1797,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1311.07129094412,
-                 "y":97.0854206807964
+                 "x":1311.07,
+                 "y":97.0854
                 }, 
                 {
                  "gid":2440,
@@ -1809,8 +1809,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1345.59280667951,
-                 "y":128.395632626847
+                 "x":1345.59,
+                 "y":128.396
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1869,6 +1869,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"As A Tutor",
                      "valign":"center",
                      "wrap":true
@@ -1914,6 +1916,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Bukuwarung",
                      "valign":"center",
                      "wrap":true
@@ -1931,6 +1935,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Zendodo",
                      "valign":"center",
                      "wrap":true
@@ -1948,6 +1954,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Singtel",
                      "valign":"center",
                      "wrap":true
@@ -1965,6 +1973,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Upcoming Projects",
                      "valign":"center",
                      "wrap":true
@@ -1982,6 +1992,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"MasterWord",
                      "valign":"center",
                      "wrap":true
@@ -1989,8 +2001,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1516.3193256262,
-                 "y":265.962158253051
+                 "x":1516.32,
+                 "y":265.962
                 }, 
                 {
                  "height":36.0936,
@@ -1999,6 +2011,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"GIC CodeToImpact",
                      "valign":"center",
                      "wrap":true
@@ -2016,6 +2030,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Education",
                      "valign":"center",
                      "wrap":true
@@ -2033,6 +2049,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Misc",
                      "valign":"center",
                      "wrap":true
@@ -2050,6 +2068,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Work Experience",
                      "valign":"center",
                      "wrap":true
@@ -2067,6 +2087,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"About Me",
                      "valign":"center",
                      "wrap":true
@@ -2084,6 +2106,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Tools",
                      "valign":"center",
                      "wrap":true
@@ -2101,6 +2125,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Hobbies",
                      "valign":"center",
                      "wrap":true
@@ -2118,6 +2144,8 @@
                  "rotation":0,
                  "text":
                     {
+                     "fontfamily":".AppleSystemUIFont",
+                     "pixelsize":18,
                      "text":"Contact Me",
                      "valign":"center",
                      "wrap":true
@@ -2125,8 +2153,8 @@
                  "type":"",
                  "visible":true,
                  "width":137.606,
-                 "x":1253.45133526012,
-                 "y":26.108627103404
+                 "x":1253.45,
+                 "y":26.1086
                 }],
          "opacity":1,
          "type":"objectgroup",

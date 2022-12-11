@@ -47,7 +47,8 @@ export const createWorld = (
       scene.add
         .text(actualX, actualY, textObject.text.text, {
           align: 'center',
-          fontSize: '1rem',
+          fontSize: '1.3rem',
+          fontFamily: 'VT323',
           backgroundColor: 'rgb(1,1,1, 0.25)',
           padding: {
             x: 5,
