@@ -61,16 +61,17 @@ export const welcomeData = (
           }}
         >
           <TypyingAnimation
-            strings={['I Love Coding', 'Solving Puzzles', 'and my Guitars']}
+            strings={['I Love Coding', 'I Love Solving Puzzles', 'I Love my Guitars']}
           />
         </div>
         <div style={{ fontSize: '1.5rem' }}>
           <div style={{ paddingBottom: '1rem' }}>
             {' '}
             To know more about me, my skills and experiences, press{' '}
-            <strong>Enter key</strong> to automatically go through my story
-            after which you can walk around with <strong>WASD keys</strong> and
-            walk upto the buttons (similar to the image)
+            <strong>Enter key</strong> to automatically or press{' '}
+            <strong>E </strong> to go through my story and walk around with{' '}
+            <strong>WASD keys</strong> and walk upto the buttons (similar to the
+            image)
           </div>
           <div>
             <strong>Thank you</strong> for checking this out

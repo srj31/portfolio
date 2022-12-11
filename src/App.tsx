@@ -11,6 +11,7 @@ function App() {
   const [initialOpen, setInitialOpen] = useState<boolean>(true)
 
   const ref = useRef<HTMLDivElement>(null)
+  const keysToRemoveModal = ['Enter', 'e']
 
   const handleOpenModal = (open: boolean) => {
     if (open) {
@@ -35,8 +36,7 @@ function App() {
       <div
         ref={ref}
         onKeyDown={(event) => {
-          console.log(event)
-          if (event.key == 'Enter') {
+          if (keysToRemoveModal.includes(event.key)) {
             setInitialOpen(false)
           }
         }}

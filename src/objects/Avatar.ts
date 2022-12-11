@@ -104,8 +104,9 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     keyD: Phaser.Input.Keyboard.Key,
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
-    keyEnter: Phaser.Input.Keyboard.Key
+    keyE: Phaser.Input.Keyboard.Key,
+    keyEnter: Phaser.Input.Keyboard.Key,
   ) {
-    this.avatar_state.handleMove(keyA, keyD, keyS, keyW, keyEnter)
+    this.avatar_state.handleMove(keyA, keyD, keyS, keyW, keyE, keyEnter)
   }
 }

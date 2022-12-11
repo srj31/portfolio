@@ -8,6 +8,7 @@ var keyS!: Phaser.Input.Keyboard.Key
 var keyD!: Phaser.Input.Keyboard.Key
 var keyW!: Phaser.Input.Keyboard.Key
 var keyEnter!: Phaser.Input.Keyboard.Key
+var keyE!: Phaser.Input.Keyboard.Key
 
 export default class MainScene extends Phaser.Scene {
   avatar!: Avatar
@@ -63,6 +64,7 @@ export default class MainScene extends Phaser.Scene {
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
     keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
+    keyE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E)
     keyEnter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
 
     ButtonInteraction.avatar = this.avatar
@@ -91,6 +93,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
-    this.avatar.update(keyA, keyD, keyS, keyW, keyEnter)
+    this.avatar.update(keyA, keyD, keyS, keyW, keyE, keyEnter)
   }
 }

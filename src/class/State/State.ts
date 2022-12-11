@@ -13,5 +13,6 @@ export abstract class State {
     keyS: Phaser.Input.Keyboard.Key,
     keyW: Phaser.Input.Keyboard.Key,
     keyEnter: Phaser.Input.Keyboard.Key,
+    keyE: Phaser.Input.Keyboard.Key,
   ): void
 }

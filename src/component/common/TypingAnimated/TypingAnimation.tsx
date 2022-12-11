@@ -53,6 +53,12 @@ const TypyingAnimation = ({ strings }: TypingAnimationProp) => {
     }
 
     if (phase === Phase.Deleting) {
+      if (typedString == 'I Love' && selectedIndex != strings.length - 1) {
+        const nextIndex = (selectedIndex + 1) % strings.length
+        setSelectedIndex(nextIndex)
+        setPhase(Phase.Typing)
+        return
+      }
       if (!typedString) {
         const nextIndex = (selectedIndex + 1) % strings.length
         setSelectedIndex(nextIndex)
