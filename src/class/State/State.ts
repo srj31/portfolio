@@ -1,4 +1,5 @@
 import { Avatar } from '../../objects/Avatar'
+import { InteractionKeys } from '../../types/keys'
 
 export abstract class State {
   avatar: Avatar // the context
@@ -8,11 +9,6 @@ export abstract class State {
   }
 
   public abstract handleMove(
-    keyA: Phaser.Input.Keyboard.Key,
-    keyD: Phaser.Input.Keyboard.Key,
-    keyS: Phaser.Input.Keyboard.Key,
-    keyW: Phaser.Input.Keyboard.Key,
-    keyEnter: Phaser.Input.Keyboard.Key,
-    keyE: Phaser.Input.Keyboard.Key,
+    keys: InteractionKeys
   ): void
 }

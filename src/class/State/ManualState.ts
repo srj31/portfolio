@@ -1,26 +1,21 @@
 import { ButtonInteraction } from '../../objects/Interaction'
+import { InteractionKeys } from '../../types/keys'
 import { State } from './State'
 
 export class ManualState extends State {
-  public handleMove(
-    keyA: Phaser.Input.Keyboard.Key,
-    keyD: Phaser.Input.Keyboard.Key,
-    keyS: Phaser.Input.Keyboard.Key,
-    keyW: Phaser.Input.Keyboard.Key,
-    keyEnter: Phaser.Input.Keyboard.Key,
-  ): void {
+  public handleMove(keys: InteractionKeys): void {
     this.avatar.player.setVelocity(0, 0)
     if (this.avatar.can_move) {
-      if (keyA.isDown) {
+      if (keys.keyA.isDown) {
         this.avatar.player.setVelocityX(-this.avatar.speed)
         this.avatar.player.anims.play('left', true)
-      } else if (keyS.isDown) {
+      } else if (keys.keyS.isDown) {
         this.avatar.player.setVelocityY(this.avatar.speed)
         this.avatar.player.anims.play('down', true)
-      } else if (keyD.isDown) {
+      } else if (keys.keyD.isDown) {
         this.avatar.player.setVelocityX(this.avatar.speed)
         this.avatar.player.anims.play('right', true)
-      } else if (keyW.isDown) {
+      } else if (keys.keyW.isDown) {
         this.avatar.player.setVelocityY(-this.avatar.speed)
         this.avatar.player.anims.play('up', true)
       } else {

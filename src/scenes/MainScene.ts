@@ -93,6 +93,6 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
-    this.avatar.update(keyA, keyD, keyS, keyW, keyE, keyEnter)
+    this.avatar.update({ keyA, keyD, keyS, keyW, keyE, keyEnter })
   }
 }

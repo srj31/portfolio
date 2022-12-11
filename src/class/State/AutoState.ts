@@ -1,6 +1,7 @@
 import { animated } from 'react-spring'
 import { Avatar } from '../../objects/Avatar'
 import { ButtonInteraction } from '../../objects/Interaction'
+import { InteractionKeys } from '../../types/keys'
 import { vectorPoints } from './constants'
 import { ManualState } from './ManualState'
 import { State } from './State'
@@ -20,18 +21,12 @@ export class AutoState extends State {
     })
   }
 
-  public handleMove(
-    keyA: Phaser.Input.Keyboard.Key,
-    keyD: Phaser.Input.Keyboard.Key,
-    keyS: Phaser.Input.Keyboard.Key,
-    keyW: Phaser.Input.Keyboard.Key,
-    keyEnter: Phaser.Input.Keyboard.Key,
-  ): void {
+  public handleMove(keys: InteractionKeys): void {
     if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
       const buttonPressed = ButtonInteraction.buttonPressed
       if (buttonPressed) {
-        if (keyEnter.isDown) {
+        if (keys.keyEnter.isDown) {
           buttonPressed.unPressButton()
           this.avatar.startMovement()
           this.t_enter_pressed_at = this.t

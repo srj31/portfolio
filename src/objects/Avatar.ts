@@ -2,6 +2,7 @@
 import Phaser from 'phaser'
 import { StartState } from '../class/State/StartState'
 import { State } from '../class/State/State'
+import { InteractionKeys } from '../types/keys'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
@@ -99,14 +100,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     this.can_move = true
   }
 
-  update(
-    keyA: Phaser.Input.Keyboard.Key,
-    keyD: Phaser.Input.Keyboard.Key,
-    keyS: Phaser.Input.Keyboard.Key,
-    keyW: Phaser.Input.Keyboard.Key,
-    keyE: Phaser.Input.Keyboard.Key,
-    keyEnter: Phaser.Input.Keyboard.Key,
-  ) {
-    this.avatar_state.handleMove(keyA, keyD, keyS, keyW, keyE, keyEnter)
+  update(keys: InteractionKeys) {
+    this.avatar_state.handleMove(keys)
   }
 }
