@@ -1,4 +1,3 @@
-import { AddShoppingCartSharp } from '@mui/icons-material'
 import Phaser from 'phaser'
 import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
