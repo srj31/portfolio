@@ -2,11 +2,12 @@ import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
 import { data } from '../Info'
 import { ReactElement } from 'react'
+import { Npc } from '../objects/Npc'
 
 export const createWorld = (
   scene: Phaser.Scene,
   sprite: Phaser.Physics.Arcade.Sprite,
-  npc_sprites: Phaser.Physics.Arcade.Sprite[],
+  npc_sprites: Npc[],
   map: Phaser.Tilemaps.Tilemap,
   tilesets: Phaser.Tilemaps.Tileset[],
 ): WorldLayer => {
@@ -37,7 +38,14 @@ export const createWorld = (
 
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
 
-  scene.physics.add.collider(sprite, npc_sprites, undefined, undefined, this)
+  // handle Collision with npc
+  scene.physics.add.collider(
+    sprite,
+    npc_sprites,
+    handleCollisionWithNPC,
+    undefined,
+    this,
+  )
 
   const textObject = map.getObjectLayer('text')
   textObject.objects.forEach((textObject) => {
@@ -62,6 +70,7 @@ export const createWorld = (
     }
   })
 
+  // buttons
   const buttons = scene.physics.add.staticGroup({ classType: Button })
   const buttonLayer = map.getObjectLayer('button')
   buttonLayer.objects.forEach((buttonObj) => {
@@ -79,7 +88,6 @@ export const createWorld = (
   addOverlapInteraction(scene, sprite, [buttons])
 
   // map
-
   const world = { backgroundlayer, dirtlayer, boundarylayer, pathlayer }
   scene.physics.add.collider(sprite, boundarylayer)
   boundarylayer.setCollision([100, 101, 102, 103, 104, 398])
@@ -92,10 +100,17 @@ export const createWorld = (
   return world
 }
 
+const handleCollisionWithNPC = (sprite: any, npc: any) => {
+  npc.onOverlapDialog()
+  setTimeout(() => {
+    npc.clearDialogBox()
+  }, 1000)
+}
+
 const addOverlapInteraction = (
   scene: Phaser.Scene,
   sprite: Phaser.Physics.Arcade.Sprite,
-  groups: Phaser.Physics.Arcade.StaticGroup[],
+  groups: Phaser.Physics.Arcade.StaticGroup[] | Phaser.Physics.Arcade.Sprite[],
 ) => {
   scene.physics.add.overlap(sprite, groups, handleItemOverlap, undefined, scene)
 }

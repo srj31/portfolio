@@ -82,14 +82,12 @@ export default class MainScene extends Phaser.Scene {
 
     ButtonInteraction.avatar = this.avatar
 
-    this.avatar.player.depth = 1
+    this.avatar.player.depth = 5
     this.physics.add.existing(this.avatar.player)
 
     npcLocations.forEach((pos, i) => {
-      this.addNpcAtPos(pos, i+1)
+      this.addNpcAtPos(pos, i + 1)
     })
-
-    const npc_players = this.npcs.map((npc) => npc.player)
 
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
     const tileset1 = map.addTilesetImage('terrain_atlas', 'terrain_atlas')
@@ -103,7 +101,7 @@ export default class MainScene extends Phaser.Scene {
     const worldLayers = createWorld(
       this,
       this.avatar.player,
-      npc_players,
+      this.npcs,
       map,
       tilesets,
     )
@@ -120,8 +118,8 @@ export default class MainScene extends Phaser.Scene {
   addNpcAtPos(pos: { x: number; y: number }, sprite_num: number) {
     const npc = new Npc(this, pos.x, pos.y, `npc${sprite_num}`, 0)
     this.npcs.push(npc)
-    npc.player.depth = 1
-    this.physics.add.existing(npc.player)
+    npc.depth = 1
+    this.physics.add.existing(npc)
   }
 
   update() {

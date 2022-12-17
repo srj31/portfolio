@@ -1,6 +1,8 @@
+import { Overlapable } from '../class/Overlapable/Overlapable'
 import { ButtonInteraction } from './Interaction'
 
-export default class Button extends Phaser.Physics.Arcade.Sprite {
+export default class Button extends Phaser.Physics.Arcade.Sprite
+  implements Overlapable {
   id!: number
   isPressed: boolean
   private dialogBox!: Phaser.GameObjects.Container
