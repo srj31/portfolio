@@ -3,6 +3,9 @@ import { InteractionKeys } from '../../types/keys'
 import { State } from './State'
 
 export class ManualState extends State {
+  public getStateString(): string {
+    return 'manual'
+  }
   public handleMove(keys: InteractionKeys): void {
     this.avatar.player.setVelocity(0, 0)
     if (this.avatar.can_move) {

@@ -8,7 +8,7 @@ export abstract class State {
     this.avatar = avatar
   }
 
-  public abstract handleMove(
-    keys: InteractionKeys
-  ): void
+  public abstract getStateString(): string
+
+  public abstract handleMove(keys: InteractionKeys): void
 }
