@@ -100,6 +100,7 @@ export default class MainScene extends Phaser.Scene {
 
     const worldLayers = createWorld(
       this,
+      this.avatar,
       this.avatar.player,
       this.npcs,
       map,

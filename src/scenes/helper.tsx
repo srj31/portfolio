@@ -3,9 +3,11 @@ import { WorldLayer } from '../types/world'
 import { data } from '../Info'
 import { ReactElement } from 'react'
 import { Npc } from '../objects/Npc'
+import { Avatar } from '../objects/Avatar'
 
 export const createWorld = (
   scene: Phaser.Scene,
+  avatar: Avatar,
   sprite: Phaser.Physics.Arcade.Sprite,
   npc_sprites: Npc[],
   map: Phaser.Tilemaps.Tilemap,
@@ -39,8 +41,9 @@ export const createWorld = (
   addGroupFromTiled(scene, map, sprite, 'statueCollide', tilesets, true, 100)
 
   // handle Collision with npc
+  scene.physics.add.collider(sprite, npc_sprites)
   scene.physics.add.collider(
-    sprite,
+    avatar.playerSelector,
     npc_sprites,
     handleCollisionWithNPC,
     undefined,
@@ -100,11 +103,9 @@ export const createWorld = (
   return world
 }
 
-const handleCollisionWithNPC = (sprite: any, npc: any) => {
+const handleCollisionWithNPC = (selector: any, npc: any) => {
+  selector.objectInZone = npc
   npc.onOverlapDialog()
-  setTimeout(() => {
-    npc.clearDialogBox()
-  }, 1000)
 }
 
 const addOverlapInteraction = (

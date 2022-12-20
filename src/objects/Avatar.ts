@@ -3,10 +3,11 @@ import Phaser from 'phaser'
 import { StartState } from '../class/State/StartState'
 import { State } from '../class/State/State'
 import { InteractionKeys } from '../types/keys'
+import PlayerSelector from './PlayerSelector'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
-
+  playerSelector!: PlayerSelector
 
   avatar_state: State
   speed = 250
@@ -24,6 +25,8 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     key = 'avatar'
     const player = scene.physics.add.sprite(x, y, key)
     player.setScale(0.8)
+    this.playerSelector = new PlayerSelector(scene, x, y, 32, 32)
+
     this.scene = scene
     this.setPosition(x, y)
     this.setTexture(key)
@@ -38,8 +41,8 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     })
 
     scene.anims.create({
-      key: 'still',
-      frames: [{ key: key, frame: 0 }],
+      key: 'still_left',
+      frames: [{ key: key, frame: 4 }],
       frameRate: 20,
     })
 
@@ -51,6 +54,12 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     })
 
     scene.anims.create({
+      key: 'still_right',
+      frames: [{ key: key, frame: 8 }],
+      frameRate: 20,
+    })
+
+    scene.anims.create({
       key: 'up',
       frames: this.anims.generateFrameNumbers(key, { start: 12, end: 16 }),
       frameRate: 10,
@@ -58,10 +67,22 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     })
 
     scene.anims.create({
+      key: 'still_up',
+      frames: [{ key: key, frame: 12 }],
+      frameRate: 20,
+    })
+
+    scene.anims.create({
       key: 'down',
       frames: this.anims.generateFrameNumbers(key, { start: 0, end: 3 }),
       frameRate: 10,
       repeat: -1,
+    })
+
+    scene.anims.create({
+      key: 'still',
+      frames: [{ key: key, frame: 0 }],
+      frameRate: 20,
     })
 
     player.setCollideWorldBounds(true)
@@ -105,5 +126,6 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
 
   update(keys: InteractionKeys) {
     this.avatar_state.handleMove(keys)
+    this.playerSelector.update(this, keys)
   }
 }

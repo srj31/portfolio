@@ -18,25 +18,27 @@ export default class PlayerSelector extends Phaser.GameObjects.Zone {
   update(avatar: Avatar, keys: InteractionKeys) {
     if (!keys) return
 
-    if (avatar.avatar_state.getStateString() == 'auto') {
+    if (avatar.avatar_state.getStateString() === 'auto') {
       return
     }
 
-    const { x, y } = avatar
+    const { x, y } = avatar.player
+    const velocity = avatar.player.body.velocity
     if (avatar.can_move) {
-      if (keys.keyA.isDown) {
+      if (velocity.x < 0) {
         this.setPosition(x - 32, y)
-      } else if (keys.keyD.isDown) {
+      } else if (velocity.x > 0) {
         this.setPosition(x + 32, y)
-      } else if (keys.keyS.isDown) {
-        this.setPosition(x, y - 32)
-      } else if (keys.keyW.isDown) {
+      } else if (velocity.y > 0) {
         this.setPosition(x, y + 32)
+      } else if (velocity.y < 0) {
+        this.setPosition(x, y - 32)
       }
     }
 
     if (this.objectInZone) {
       if (!this.scene.physics.overlap(this, this.objectInZone)) {
+        this.objectInZone.clearDialogBox()
         this.objectInZone = undefined
       }
     }

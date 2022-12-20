@@ -20,6 +20,10 @@ export class AutoState extends State {
     })
   }
 
+  public getStateString() {
+    return 'auto'
+  }
+
   public handleMove(keys: InteractionKeys): void {
     if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
@@ -39,7 +43,7 @@ export class AutoState extends State {
       }
     } else {
       const buttonPressed = ButtonInteraction.buttonPressed
-      if(buttonPressed) {
+      if (buttonPressed) {
         buttonPressed.unPressButton()
         this.avatar.startMovement()
       }
