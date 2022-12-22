@@ -1,4 +1,4 @@
-import { Avatar } from './Avatar'
+import { Avatar } from './Characters/Avatar'
 import Button from './Button'
 
 // to allow us to keep track of the button pressed by the avatar

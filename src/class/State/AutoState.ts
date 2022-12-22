@@ -1,4 +1,4 @@
-import { Avatar } from '../../objects/Avatar'
+import { Avatar } from '../../objects/Characters/Avatar'
 import { ButtonInteraction } from '../../objects/Interaction'
 import { InteractionKeys } from '../../types/keys'
 import { vectorPoints } from './constants'

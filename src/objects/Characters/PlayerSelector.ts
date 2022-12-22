@@ -1,4 +1,4 @@
-import { InteractionKeys } from '../types/keys'
+import { InteractionKeys } from '../../types/keys'
 import { Avatar } from './Avatar'
 
 export default class PlayerSelector extends Phaser.GameObjects.Zone {

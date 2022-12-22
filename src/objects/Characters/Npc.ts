@@ -1,7 +1,6 @@
 // GameObject avatar
-import { timeStamp } from 'console'
-import Phaser, { GameObjects } from 'phaser'
-import { Overlapable } from '../class/Overlapable/Overlapable'
+import Phaser from 'phaser'
+import { Overlapable } from '../../class/Overlapable/Overlapable'
 
 export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
   y_offset = 0

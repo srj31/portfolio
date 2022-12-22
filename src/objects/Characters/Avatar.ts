@@ -1,8 +1,8 @@
 // GameObject avatar
 import Phaser from 'phaser'
-import { StartState } from '../class/State/StartState'
-import { State } from '../class/State/State'
-import { InteractionKeys } from '../types/keys'
+import { StartState } from '../../class/State/StartState'
+import { State } from '../../class/State/State'
+import { InteractionKeys } from '../../types/keys'
 import PlayerSelector from './PlayerSelector'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {

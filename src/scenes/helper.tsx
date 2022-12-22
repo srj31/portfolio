@@ -2,8 +2,8 @@ import Button from '../objects/Button'
 import { WorldLayer } from '../types/world'
 import { data } from '../Info'
 import { ReactElement } from 'react'
-import { Npc } from '../objects/Npc'
-import { Avatar } from '../objects/Avatar'
+import { Npc } from '../objects/Characters/Npc'
+import { Avatar } from '../objects/Characters/Avatar'
 
 export const createWorld = (
   scene: Phaser.Scene,

@@ -1,8 +1,8 @@
 import Phaser from 'phaser'
 import { EDUCATION_NPC_DIALOGS } from '../data/npc_dialogs'
-import { Avatar } from '../objects/Avatar'
+import { Avatar } from '../objects/Characters/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
-import { Npc } from '../objects/Npc'
+import { Npc } from '../objects/Characters/Npc'
 import { npcLocations } from './constants'
 import { createWorld } from './helper'
 

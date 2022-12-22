@@ -1,4 +1,4 @@
-import { Avatar } from '../../objects/Avatar'
+import { Avatar } from '../../objects/Characters/Avatar'
 import { InteractionKeys } from '../../types/keys'
 
 export abstract class State {
