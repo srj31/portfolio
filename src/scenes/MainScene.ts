@@ -1,4 +1,5 @@
 import Phaser from 'phaser'
+import { EDUCATION_NPC_DIALOGS } from '../data/npc_dialogs'
 import { Avatar } from '../objects/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
 import { Npc } from '../objects/Npc'
@@ -117,7 +118,14 @@ export default class MainScene extends Phaser.Scene {
   }
 
   addNpcAtPos(pos: { x: number; y: number }, sprite_num: number) {
-    const npc = new Npc(this, pos.x, pos.y, `npc${sprite_num}`, 0)
+    const npc = new Npc(
+      this,
+      pos.x,
+      pos.y,
+      `npc${sprite_num}`,
+      0,
+      EDUCATION_NPC_DIALOGS,
+    )
     this.npcs.push(npc)
     npc.depth = 1
     this.physics.add.existing(npc)

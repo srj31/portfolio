@@ -40,6 +40,11 @@ export default class PlayerSelector extends Phaser.GameObjects.Zone {
       if (!this.scene.physics.overlap(this, this.objectInZone)) {
         this.objectInZone.clearDialogBox()
         this.objectInZone = undefined
+      } else {
+        // you pressed to interact with the object
+        if(keys.keyE.isDown) {
+          this.objectInZone.interact();
+        }
       }
     }
   }

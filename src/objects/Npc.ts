@@ -1,10 +1,14 @@
 // GameObject avatar
+import { timeStamp } from 'console'
 import Phaser, { GameObjects } from 'phaser'
 import { Overlapable } from '../class/Overlapable/Overlapable'
 
 export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
   y_offset = 0
   private dialogBox!: Phaser.GameObjects.Container
+  dialogs?: string[]
+  isInInteraction: boolean
+  curDialogIndex: number
 
   constructor(
     scene: Phaser.Scene,
@@ -12,6 +16,7 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
     y: number,
     key: string,
     frame: string | number,
+    dialogs?: string[],
   ) {
     super(scene, x, y, key, frame)
     scene.physics.world.enable(this)
@@ -19,13 +24,15 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
     scene.add.existing(this)
     scene.add.sprite(x, y, key)
 
+    this.curDialogIndex = 0
+    this.isInInteraction = false
     this.setScale(0.7)
     this.scene = scene
     this.setPosition(x, y)
     this.setTexture(key)
     this.setFrame(frame)
     this.dialogBox = this.scene.add.container().setDepth(1000)
-
+    this.dialogs = dialogs
 
     scene.anims.create({
       key: 'left',
@@ -88,7 +95,7 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
 
     //play around with the values to see what they do
     const dialogBoxX = this.x - dialogBoxWidth * 0.5
-    const dialogBoxY = this.y - this.height * 0.75
+    const dialogBoxY = this.y - this.height * 0.7
 
     this.dialogBox.add(
       this.scene.add
@@ -116,10 +123,19 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
   // remove everything in the dialog box container
   clearDialogBox() {
     this.dialogBox.removeAll(true)
+    this.isInInteraction = false
   }
 
   onOverlapDialog() {
+    if (this.isInInteraction && this.dialogs) {
+      this.setDialogBox(this.dialogs[this.curDialogIndex])
+      return
+    }
     this.setDialogBox('Press E to interact')
+  }
+
+  interact() {
+    this.isInInteraction = true
   }
 
   update() {
