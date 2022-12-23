@@ -86,7 +86,6 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     })
 
     player.setCollideWorldBounds(true)
-    player.setBounce(1)
     scene.time.addEvent({
       delay: 1000, // ms
       callback: this.setCorrectBounds,

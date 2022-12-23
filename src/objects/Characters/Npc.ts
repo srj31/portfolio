@@ -23,7 +23,7 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
     scene.add.existing(this)
     scene.add.sprite(x, y, key)
 
-    this.curDialogIndex = 0
+    this.curDialogIndex = -1
     this.isInInteraction = false
     this.setScale(0.7)
     this.scene = scene
@@ -68,7 +68,6 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
     })
 
     this.setCollideWorldBounds(true)
-    this.setBounce(0)
     scene.time.addEvent({
       delay: 1000, // ms
       callback: this.setCorrectBounds,
@@ -84,8 +83,8 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
   setDialogBox(text: string) {
     const innerText = this.scene.add
       .text(0, 0, text)
-      .setFontFamily('Arial')
-      .setFontSize(12)
+      .setFontFamily('VT323')
+      .setFontSize(20)
       .setColor('#000000')
 
     //set the size of the dialog box
@@ -94,7 +93,7 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
 
     //play around with the values to see what they do
     const dialogBoxX = this.x - dialogBoxWidth * 0.5
-    const dialogBoxY = this.y - this.height * 0.7
+    const dialogBoxY = this.y - dialogBoxHeight * 2
 
     this.dialogBox.add(
       this.scene.add
@@ -123,18 +122,22 @@ export class Npc extends Phaser.Physics.Arcade.Sprite implements Overlapable {
   clearDialogBox() {
     this.dialogBox.removeAll(true)
     this.isInInteraction = false
+    this.curDialogIndex = -1
   }
 
   onOverlapDialog() {
     if (this.isInInteraction && this.dialogs) {
-      this.setDialogBox(this.dialogs[this.curDialogIndex])
+      if (this.curDialogIndex >= 0 && this.curDialogIndex < this.dialogs.length)
+        this.setDialogBox(this.dialogs[this.curDialogIndex])
       return
     }
     this.setDialogBox('Press E to interact')
   }
 
   interact() {
+    this.dialogBox.removeAll(true)
     this.isInInteraction = true
+    this.curDialogIndex++
   }
 
   update() {

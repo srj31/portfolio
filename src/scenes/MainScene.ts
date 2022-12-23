@@ -1,5 +1,5 @@
 import Phaser from 'phaser'
-import { EDUCATION_NPC_DIALOGS } from '../data/npc_dialogs'
+import { EDUCATION_NPC_DIALOGS, NPC_DIALOGS } from '../data/npc_dialogs'
 import { Avatar } from '../objects/Characters/Avatar'
 import { ButtonInteraction } from '../objects/Interaction'
 import { Npc } from '../objects/Characters/Npc'
@@ -74,6 +74,7 @@ export default class MainScene extends Phaser.Scene {
     )
     this.npcs = []
 
+    // creating keys to listen on
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
@@ -86,10 +87,12 @@ export default class MainScene extends Phaser.Scene {
     this.avatar.player.depth = 5
     this.physics.add.existing(this.avatar.player)
 
+    // assigning npcs
     npcLocations.forEach((pos, i) => {
       this.addNpcAtPos(pos, i + 1)
     })
 
+    // creating map
     const map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 })
     const tileset1 = map.addTilesetImage('terrain_atlas', 'terrain_atlas')
     const tileset2 = map.addTilesetImage('build_atlas', 'build_atlas')
@@ -108,6 +111,7 @@ export default class MainScene extends Phaser.Scene {
       tilesets,
     )
 
+    // adding the camera
     this.cameras.main
       .setBounds(0, 0, this.mapWidth, this.mapHeight)
       .setName('main')
@@ -124,7 +128,7 @@ export default class MainScene extends Phaser.Scene {
       pos.y,
       `npc${sprite_num}`,
       0,
-      EDUCATION_NPC_DIALOGS,
+      NPC_DIALOGS[`npc${sprite_num}`],
     )
     this.npcs.push(npc)
     npc.depth = 1

@@ -42,8 +42,8 @@ export default class PlayerSelector extends Phaser.GameObjects.Zone {
         this.objectInZone = undefined
       } else {
         // you pressed to interact with the object
-        if(keys.keyE.isDown) {
-          this.objectInZone.interact();
+        if (Phaser.Input.Keyboard.JustDown(keys.keyE)) {
+          this.objectInZone.interact()
         }
       }
     }
