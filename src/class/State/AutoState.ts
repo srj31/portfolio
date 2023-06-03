@@ -25,6 +25,9 @@ export class AutoState extends State {
   }
 
   public handleMove(keys: InteractionKeys): void {
+    if (keys.keyE.isDown) {
+      this.avatar.setAvatar_State(new ManualState(this.avatar))
+    }
     if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
       const buttonPressed = ButtonInteraction.buttonPressed
