@@ -11,6 +11,7 @@ export const codeToImpactImages = [
   'images/codeToImpact.png',
   'images/codeToImpactArchitecture.png',
 ]
+export const gicImages = ['images/gic.png']
 
 export const underConstruction = 'images/under_construction.gif'
 

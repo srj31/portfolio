@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="221">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="21" nextobjectid="228">
  <editorsettings>
   <export target="map1.json" format="json"/>
  </editorsettings>
@@ -372,6 +372,11 @@
     <property name="type" value="contact"/>
    </properties>
   </object>
+  <object id="226" gid="2293" x="573.529" y="1085.18" width="32" height="32">
+   <properties>
+    <property name="type" value="gic"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="6" name="decorUncollidable" width="60" height="40">
   <data encoding="csv">
@@ -417,7 +422,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="15" name="statue">
+ <objectgroup id="15" name="statue" visible="0">
   <object id="32" gid="5065" x="544.126" y="127.389" width="32" height="32"/>
   <object id="33" gid="5033" x="544.126" y="95.4826" width="32" height="32"/>
   <object id="38" gid="5063" x="173.405" y="293.525" width="32" height="32"/>
@@ -494,6 +499,9 @@
   <object id="216" gid="2471" x="1280.56" y="127.593" width="32" height="32"/>
   <object id="217" gid="2473" x="1311.07" y="97.0854" width="32" height="32"/>
   <object id="219" gid="2440" x="1345.59" y="128.396" width="32" height="32"/>
+  <object id="221" gid="3760" x="613.454" y="1083.7" width="32" height="32"/>
+  <object id="222" gid="3760" x="630.081" y="1069.44" width="32" height="32"/>
+  <object id="223" gid="3760" x="633.644" y="1111.01" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="20" name="text">
   <object id="189" x="496.55" y="30.8034" width="131.838" height="29.5713"/>
@@ -546,6 +554,9 @@
   </object>
   <object id="220" x="1253.45" y="26.1086" width="137.606" height="36.0936">
    <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">Contact Me</text>
+  </object>
+  <object id="227" x="606.668" y="1016.36" width="137.606" height="36.0936">
+   <text fontfamily=".AppleSystemUIFont" pixelsize="18" wrap="1" valign="center">GIC</text>
   </object>
  </objectgroup>
 </map>

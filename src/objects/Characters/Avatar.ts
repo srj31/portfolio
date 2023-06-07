@@ -10,7 +10,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
   playerSelector!: PlayerSelector
 
   avatar_state: State
-  speed = 250
+  speed = 400
   y_offset = 15
   can_move = true
   constructor(
