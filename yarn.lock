@@ -1985,6 +1985,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-sound@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@types/react-sound/-/react-sound-1.2.3.tgz"
+  integrity sha512-PfeO57BIvocJe5Gwj/EicTu1XTYuliXBNzz8Uj9qm3LglnqP+X0zb2FUKZUIVISZ8L/e8PrCjciAix2ZsdKhzw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.4":
   version "4.4.4"
   resolved "https://registry.npmjs.org/@types/react-transition-group/-/react-transition-group-4.4.4.tgz"
