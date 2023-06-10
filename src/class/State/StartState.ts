@@ -4,6 +4,10 @@ import { ManualState } from './ManualState'
 import { State } from './State'
 
 export class StartState extends State {
+  public getStateString(): string {
+    return 'start'
+  }
+
   public handleMove(keys: InteractionKeys): void {
     if (keys.keyEnter.isDown) {
       this.avatar.setAvatar_State(new AutoState(this.avatar))

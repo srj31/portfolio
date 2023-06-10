@@ -4,11 +4,15 @@ import Info from './component/Info/Info'
 import Modal from './component/Modal/Modal'
 import { welcomeData } from './data/data'
 import { ButtonInteraction } from './objects/Interaction'
+import Sound from 'react-sound'
+
+type PlayStatus = 'PLAYING' | 'STOPPED'
 
 function App() {
   const [open, setOpen] = useState<boolean>(false)
   const [modal, setModal] = useState(<div></div>)
   const [initialOpen, setInitialOpen] = useState<boolean>(true)
+  const [playStatus, setPlayStatus] = useState<PlayStatus>('STOPPED')
 
   const ref = useRef<HTMLDivElement>(null)
   const keysToRemoveModal = ['Enter', 'e']
@@ -29,15 +33,44 @@ function App() {
       ref.current.focus()
     }
   }, [])
+  const BgMusicButton = () => {
+    const statusToImageMap: { [key in PlayStatus]: string } = {
+      PLAYING: 'images/bg_music_on.png',
+      STOPPED: 'images/bg_music_off.png',
+    }
 
+    const toggleMusic = () => {
+      setPlayStatus((oldStatus) => {
+        if (oldStatus == 'PLAYING') return 'STOPPED'
+        else return 'PLAYING'
+      })
+    }
+    return (
+      <div className={'mute_button'}>
+        <img
+          width={'50vw'}
+          src={statusToImageMap[playStatus]}
+          onClick={toggleMusic}
+        />
+      </div>
+    )
+  }
   return (
     <div className="App">
       <Info />
+      <BgMusicButton />
+      <Sound
+        url={'audio/bg_music.mp3'}
+        playStatus={playStatus}
+        loop={true}
+        volume={2}
+      />
       <div
         ref={ref}
         onKeyDown={(event) => {
           if (keysToRemoveModal.includes(event.key)) {
             setInitialOpen(false)
+            setPlayStatus('PLAYING')
           }
         }}
         tabIndex={-1}

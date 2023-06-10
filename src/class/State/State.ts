@@ -1,4 +1,4 @@
-import { Avatar } from '../../objects/Avatar'
+import { Avatar } from '../../objects/Characters/Avatar'
 import { InteractionKeys } from '../../types/keys'
 
 export abstract class State {
@@ -8,7 +8,7 @@ export abstract class State {
     this.avatar = avatar
   }
 
-  public abstract handleMove(
-    keys: InteractionKeys
-  ): void
+  public abstract getStateString(): string
+
+  public abstract handleMove(keys: InteractionKeys): void
 }

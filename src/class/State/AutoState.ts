@@ -1,4 +1,4 @@
-import { Avatar } from '../../objects/Avatar'
+import { Avatar } from '../../objects/Characters/Avatar'
 import { ButtonInteraction } from '../../objects/Interaction'
 import { InteractionKeys } from '../../types/keys'
 import { vectorPoints } from './constants'
@@ -20,7 +20,14 @@ export class AutoState extends State {
     })
   }
 
+  public getStateString() {
+    return 'auto'
+  }
+
   public handleMove(keys: InteractionKeys): void {
+    if (keys.keyE.isDown) {
+      this.avatar.setAvatar_State(new ManualState(this.avatar))
+    }
     if (ButtonInteraction.onButton) {
       // can be two things now you either press it or unpress it
       const buttonPressed = ButtonInteraction.buttonPressed
@@ -39,7 +46,7 @@ export class AutoState extends State {
       }
     } else {
       const buttonPressed = ButtonInteraction.buttonPressed
-      if(buttonPressed) {
+      if (buttonPressed) {
         buttonPressed.unPressButton()
         this.avatar.startMovement()
       }

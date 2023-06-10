@@ -13,6 +13,7 @@ import {
   uniData,
   welcomeData,
   zendodoData,
+  gicData,
 } from './data/data'
 
 interface messageDict {
@@ -25,6 +26,7 @@ export const data: messageDict = {
   exam: examData,
   bukuwarung: bukuwarungData,
   singtel: ncsData,
+  gic: gicData,
   zendodo: zendodoData,
   contact: contactData,
   masterword: masterwordData,

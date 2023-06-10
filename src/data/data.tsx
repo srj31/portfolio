@@ -17,6 +17,7 @@ import {
   cppIcon,
   devpostLink,
   examImages,
+  gicImages,
   githubLink,
   gitIcon,
   instaLink,
@@ -61,7 +62,11 @@ export const welcomeData = (
           }}
         >
           <TypyingAnimation
-            strings={['I Love Coding', 'I Love Solving Puzzles', 'I Love my Guitars']}
+            strings={[
+              'I Love Coding',
+              'I Love Solving Puzzles',
+              'I Love my Guitars',
+            ]}
           />
         </div>
         <div style={{ fontSize: '1.5rem' }}>
@@ -302,6 +307,43 @@ export const ncsData = (
               Currently working on training on Red Team/ Cybersecurity and
               setting up the virtual security lab for malware attacks and
               analysis. To be presented at the OT-IASC Summit
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
+export const gicData = (
+  <div className={styles.container}>
+    <div className={styles.title}>Internship at GIC</div>
+    <div className={styles.images}>
+      <WovenImageList imgList={gicImages} cols={1} />
+    </div>
+    <div className={styles.body}>
+      <div className={styles.section}>
+        <div className={styles.subsection} style={{ flexDirection: 'column' }}>
+          <div>
+            <strong>Internship Period: </strong> May 2023 to August 2023
+          </div>
+          <div>
+            <strong>Role: </strong> Software Development Intern
+          </div>
+          <div>
+            <strong>Tech stack: </strong> NestJs, Oracle SQL, Typescript
+          </div>
+        </div>
+        <div className={styles.subsection}>
+          <h1>Responsibilites:</h1>
+          <ul>
+            <li>
+              API development for extracting performance of portfolios and
+              comparing with the benchmark
+            </li>
+            <li>
+              Automating and rate limiting regression testing to ensure the 3rd
+              party API is not overloaded with the requests getting lost
             </li>
           </ul>
         </div>
