@@ -5,7 +5,6 @@ import Modal from './component/Modal/Modal'
 import { welcomeData } from './data/data'
 import { ButtonInteraction } from './objects/Interaction'
 import Sound from 'react-sound'
-import BgMusic from './audio/bg_music.mp3'
 
 type PlayStatus = 'PLAYING' | 'STOPPED'
 
@@ -13,7 +12,7 @@ function App() {
   const [open, setOpen] = useState<boolean>(false)
   const [modal, setModal] = useState(<div></div>)
   const [initialOpen, setInitialOpen] = useState<boolean>(true)
-  const [playStatus, setPlayStatus] = useState<PlayStatus>('PLAYING')
+  const [playStatus, setPlayStatus] = useState<PlayStatus>('STOPPED')
 
   const ref = useRef<HTMLDivElement>(null)
   const keysToRemoveModal = ['Enter', 'e']
@@ -61,9 +60,8 @@ function App() {
       <Info />
       <BgMusicButton />
       <Sound
-        url={BgMusic}
+        url={'audio/bg_music.mp3'}
         playStatus={playStatus}
-        onError={() => setPlayStatus('STOPPED')}
         loop={true}
         volume={2}
       />
@@ -72,6 +70,7 @@ function App() {
         onKeyDown={(event) => {
           if (keysToRemoveModal.includes(event.key)) {
             setInitialOpen(false)
+            setPlayStatus('PLAYING')
           }
         }}
         tabIndex={-1}
