@@ -13,7 +13,7 @@ function App() {
   const [open, setOpen] = useState<boolean>(false)
   const [modal, setModal] = useState(<div></div>)
   const [initialOpen, setInitialOpen] = useState<boolean>(true)
-  const [playStatus, setPlayStatus] = useState<PlayStatus>('STOPPED')
+  const [playStatus, setPlayStatus] = useState<PlayStatus>('PLAYING')
 
   const ref = useRef<HTMLDivElement>(null)
   const keysToRemoveModal = ['Enter', 'e']
