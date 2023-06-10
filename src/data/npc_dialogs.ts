@@ -14,8 +14,13 @@ export const WORK_NPC_DIALOGS = [
   'You should go ASAP!!!',
 ]
 
-
+export const ACHIEVEMENT_NPC_DIALOGS = [
+  'Take a look into a few projects done by Sourabh...',
+  'along with either the repo or the deployed links...',
+  'hope you enjoy some of the projects!!!',
+]
 export const NPC_DIALOGS: { [key: string]: string[] } = {
   npc1: EDUCATION_NPC_DIALOGS,
   npc2: WORK_NPC_DIALOGS,
+  npc3: ACHIEVEMENT_NPC_DIALOGS,
 }
