@@ -18,6 +18,7 @@ export default class MainScene extends Phaser.Scene {
   npcs!: Npc[]
   mapHeight = 1270
   mapWidth = 1920
+  walkingSound!: Phaser.Sound.BaseSound
 
   constructor() {
     super('MainScene')
@@ -62,6 +63,7 @@ export default class MainScene extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 32,
     })
+    this.load.audio('walk', 'audio/8bit_walk_cycle.mp3')
   }
 
   create() {
@@ -83,6 +85,13 @@ export default class MainScene extends Phaser.Scene {
     keyEnter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
 
     ButtonInteraction.avatar = this.avatar
+    this.walkingSound = this.sound.add('walk', {
+      volume: 0.02,
+      seek: 2,
+      loop: true,
+    })
+
+    console.log(this.walkingSound)
 
     this.avatar.player.depth = 5
     this.physics.add.existing(this.avatar.player)

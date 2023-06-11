@@ -9,7 +9,7 @@ export class AutoState extends State {
   points = vectorPoints
   curPoint = 0
   path = new Phaser.Curves.Path(vectorPoints[0].x, vectorPoints[0].y)
-  delta_time = 1
+  delta_time = 0.5
   duration = 1700
   t = 0
   t_enter_pressed_at = 0
@@ -25,33 +25,6 @@ export class AutoState extends State {
   }
 
   public handleMove(keys: InteractionKeys): void {
-    if (keys.keyE.isDown) {
-      this.avatar.setAvatar_State(new ManualState(this.avatar))
-    }
-    if (ButtonInteraction.onButton) {
-      // can be two things now you either press it or unpress it
-      const buttonPressed = ButtonInteraction.buttonPressed
-      if (buttonPressed) {
-        if (keys.keyEnter.isDown) {
-          buttonPressed.unPressButton()
-          this.avatar.startMovement()
-          this.t_enter_pressed_at = this.t
-        }
-      } else {
-        const delta_threshold = 20.0
-        if (this.t - this.t_enter_pressed_at > delta_threshold) {
-          ButtonInteraction.onButton.pressButton()
-          this.avatar.stopMovement()
-        }
-      }
-    } else {
-      const buttonPressed = ButtonInteraction.buttonPressed
-      if (buttonPressed) {
-        buttonPressed.unPressButton()
-        this.avatar.startMovement()
-      }
-    }
-
     if (this.avatar.can_move) {
       this.t += this.delta_time
 
@@ -70,6 +43,35 @@ export class AutoState extends State {
         var new_pos = this.path.getPoint(d)
         this.animate(cur_pos, new_pos)
         this.avatar.player.setPosition(new_pos.x, new_pos.y)
+      }
+    }
+
+    if (keys.keyE.isDown) {
+      this.avatar.setAvatar_State(new ManualState(this.avatar))
+    }
+    if (ButtonInteraction.onButton) {
+      // can be two things now you either press it or unpress it
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if (buttonPressed) {
+        if (keys.keyEnter.isDown) {
+          buttonPressed.unPressButton()
+          this.avatar.startMovement()
+          this.t_enter_pressed_at = this.t
+        } else {
+          this.avatar.stopMovement()
+        }
+      } else {
+        const delta_threshold = 20.0
+        if (this.t - this.t_enter_pressed_at > delta_threshold) {
+          ButtonInteraction.onButton.pressButton()
+          this.avatar.stopMovement()
+        }
+      }
+    } else {
+      const buttonPressed = ButtonInteraction.buttonPressed
+      if (buttonPressed) {
+        buttonPressed.unPressButton()
+        this.avatar.startMovement()
       }
     }
   }
