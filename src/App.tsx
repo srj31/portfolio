@@ -63,7 +63,7 @@ function App() {
         url={'audio/bg_music.mp3'}
         playStatus={playStatus}
         loop={true}
-        volume={2}
+        volume={1}
       />
       <div
         ref={ref}
