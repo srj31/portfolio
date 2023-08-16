@@ -9,7 +9,7 @@ export class AutoState extends State {
   points = vectorPoints
   curPoint = 0
   path = new Phaser.Curves.Path(vectorPoints[0].x, vectorPoints[0].y)
-  delta_time = 1
+  delta_time = 1.5
   duration = 1700
   t = 0
   t_enter_pressed_at = 0
@@ -33,22 +33,21 @@ export class AutoState extends State {
       const buttonPressed = ButtonInteraction.buttonPressed
       if (buttonPressed) {
         if (keys.keyEnter.isDown) {
-          buttonPressed.unPressButton()
           this.avatar.startMovement()
+          buttonPressed.unPressButton()
           this.t_enter_pressed_at = this.t
+        } else {
+          this.avatar.stopMovement()
+          return;
         }
       } else {
-        const delta_threshold = 20.0
+
+        const delta_threshold = 40.0
         if (this.t - this.t_enter_pressed_at > delta_threshold) {
           ButtonInteraction.onButton.pressButton()
           this.avatar.stopMovement()
+          return;
         }
-      }
-    } else {
-      const buttonPressed = ButtonInteraction.buttonPressed
-      if (buttonPressed) {
-        buttonPressed.unPressButton()
-        this.avatar.startMovement()
       }
     }
 
@@ -85,5 +84,6 @@ export class AutoState extends State {
     } else if (cur_pos.y > new_pos.y) {
       this.avatar.player.anims.play('up', true)
     }
+
   }
 }

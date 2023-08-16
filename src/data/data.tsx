@@ -104,6 +104,12 @@ export const uniData = (
             <strong>Major:</strong> Bachelors in Computer Science
           </div>
           <div>
+            <strong>Specialization:</strong> Algorithms & Theory and Artificial Intelligence
+          </div>
+          <div>
+            <strong>Dean's List: </strong> AY 22/23 Sem1 & AY 22/23 Sem2
+          </div>
+          <div>
             <strong>Co-curricular Activities: </strong>
             <ul>
               <li>
@@ -148,7 +154,13 @@ export const tutorData = (
     <div className={styles.body}>
       <div className={styles.section}>
         <div className={styles.subsection}>
-          <strong>CS2040/CS2040S: </strong>Algorithms and Data Structure under
+          <strong>Research Assistant </strong> under the NUS/NCS Joint Laboratory for
+          Cyber Security. Developed a full stack dashboard for displaying the results of Phishing Detection Model
+          and Graph Analytics on OT/IT Security. Also worked on implementing a semi automated solution for building
+          a digital twin using open source tool
+        </div>
+        <div className={styles.subsection}>
+          <strong>CS2040/CS2040S, </strong>Algorithms and Data Structure under
           Dr. Chong Ket Fah. As a Teaching Assistant, I was responsible for
           holding Lab Sessions and summarise and clarify student doubts
         </div>
@@ -172,12 +184,21 @@ export const examData = (
     <div className={styles.body}>
       <div className={styles.section}>
         <div className={styles.subsection}>
-          <strong>International Linguistics Olympiad: </strong> Reprsented India
+          <strong>International Linguistics Olympiad: </strong> Represented India
           at the IOL 2019 Yongin. The selection process required two rounds and
           a camp for the team selection at the National level. The top 8
           students were chosen from high school students all over the nation. I
           was fortunate to get a silver medal, a best solution and a bronze
           medal for the team competition during the Team Selection Round.
+        </div>
+        <div className={styles.subsection}>
+          <strong>Correlation One India Terminal: </strong> Placed 3rd in the AI programming game where
+          players code algorithms (i.e. strategies) that compete head-to-head in a tower defense-style. 
+        </div>
+        <div className={styles.subsection}>
+          <strong>Hacks for Humanity: </strong> A 36 hybrid hackathon by the Arizona State University where the theme 
+          is Hacking for Social Good. Our team developed a solution for helping Alzheimer patients and their 
+          helpers to keep track of their surroundings and their planned tasks and placed 3rd for the event
         </div>
         <div className={styles.subsection}>
           <strong>KVPY: </strong> The Kishore Vaigyanik Protsahan Yojana (KVPY)
@@ -345,6 +366,11 @@ export const gicData = (
               Automating and rate limiting regression testing to ensure the 3rd
               party API is not overloaded with the requests getting lost
             </li>
+            <li>
+              Implement healthchecks for the various third party services, database,
+              disk and memory usage and configured a notification system incase of
+              failures
+            </li> 
           </ul>
         </div>
       </div>

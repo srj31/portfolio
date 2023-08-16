@@ -4,17 +4,19 @@ import { StartState } from '../../class/State/StartState'
 import { State } from '../../class/State/State'
 import { InteractionKeys } from '../../types/keys'
 import PlayerSelector from './PlayerSelector'
+import MainScene from '../../scenes/MainScene'
 
 export class Avatar extends Phaser.Physics.Arcade.Sprite {
   player!: Phaser.Physics.Arcade.Sprite
   playerSelector!: PlayerSelector
+  scene: MainScene
 
   avatar_state: State
   speed = 400
   y_offset = 15
   can_move = true
   constructor(
-    scene: Phaser.Scene,
+    scene: MainScene,
     x: number,
     y: number,
     key: string,
@@ -36,7 +38,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     scene.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNumbers(key, { start: 4, end: 7 }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     })
 
@@ -49,7 +51,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     scene.anims.create({
       key: 'right',
       frames: this.anims.generateFrameNumbers(key, { start: 8, end: 11 }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     })
 
@@ -62,7 +64,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     scene.anims.create({
       key: 'up',
       frames: this.anims.generateFrameNumbers(key, { start: 12, end: 16 }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     })
 
@@ -75,7 +77,7 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     scene.anims.create({
       key: 'down',
       frames: this.anims.generateFrameNumbers(key, { start: 0, end: 3 }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     })
 
@@ -113,7 +115,10 @@ export class Avatar extends Phaser.Physics.Arcade.Sprite {
     this.can_move = false
     this.player.scene.time.delayedCall(
       0.05 * 1000,
-      () => this.player.anims.play('still', true),
+      () => {
+        this.player.anims.play('still', true)
+        this.scene.walkingSound.stop()
+      },
       [],
       this.player,
     )
